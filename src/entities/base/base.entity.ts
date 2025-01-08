@@ -2,8 +2,9 @@ import {
   PrimaryGeneratedColumn,
   BaseEntity as TypeOrmBaseEntity,
   CreateDateColumn,
-  UpdateDateColumn,
+  UpdateDateColumn, TableInheritance, Entity,
 } from 'typeorm';
+
 
 export class SMISBaseEntity extends TypeOrmBaseEntity {
   @PrimaryGeneratedColumn('uuid')

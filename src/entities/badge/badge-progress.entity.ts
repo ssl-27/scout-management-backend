@@ -1,7 +1,7 @@
-import { Column, Entity, ManyToOne } from 'typeorm';
-import { ScoutMember } from './scoutmember.entity';
+import { Column, Entity, ManyToOne, TableInheritance } from 'typeorm';
+import { ScoutMember } from '../user-groups/scout/scout-member.entity';
 import { ProficiencyBadge } from './proficiency-badge.entity';
-import { SMISBaseEntity } from './base.entity';
+import { SMISBaseEntity } from '../base/base.entity';
 
 @Entity()
 export class BadgeProgress extends SMISBaseEntity {
