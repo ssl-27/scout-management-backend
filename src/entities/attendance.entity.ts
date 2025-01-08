@@ -1,6 +1,6 @@
-import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
-import { ScoutMember } from './scoutmember.entity';
-import { SMISBaseEntity } from './base.entity';
+import { Column, Entity, JoinColumn, ManyToOne, TableInheritance } from 'typeorm';
+import { ScoutMember } from './user-groups/scout/scout-member.entity';
+import { SMISBaseEntity } from './base/base.entity';
 
 @Entity()
 export class Attendance extends SMISBaseEntity {
@@ -14,6 +14,6 @@ export class Attendance extends SMISBaseEntity {
   notes?: string;
 
   @ManyToOne(() => ScoutMember)
-  @JoinColumn({ name: 'scoutId' })
+  @JoinColumn({ name: 'ymisId' })
   scout: ScoutMember;
 }
