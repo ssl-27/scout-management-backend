@@ -4,6 +4,7 @@ import { UserTypeEnum } from '../../../common/enum/user-type.enum';
 import { CreateLeaderDto } from './create-leader.dto';
 import { CreateMemberDto } from './create-member.dto';
 import { CreateGuardianDto } from './create-guardian.dto';
+import { GenderEnum } from '../../../common/enum/gender.enum';
 
 
 export class CreateUserGeneralDto {
@@ -28,6 +29,12 @@ export class CreateUserGeneralDto {
 
   @IsEnum(UserTypeEnum)
   role: UserTypeEnum;
+
+  @IsEnum(GenderEnum)
+  gender: GenderEnum;
+
+  @IsString()
+  status: string
 
   leaderDetails: CreateLeaderDto;
 

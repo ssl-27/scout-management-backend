@@ -7,10 +7,12 @@ import { ScoutMember } from '../../../entities/user-groups/scout/scout-member.en
 import { UserGeneralController } from '../controllers/user-general.controller';
 import { UserGeneralService } from '../services/user-general.service';
 import { Leader } from '../../../entities/user-groups/leader.entity';
+import { MemberGuardian } from '../../../entities/user-groups/member-guardian.entity';
+import { UsersController } from '../controllers/users.controller';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([BaseUserEntity, Leader, Guardian, Scout, ScoutMember])],
-  controllers: [UserGeneralController],
+  imports: [TypeOrmModule.forFeature([BaseUserEntity, Leader, Guardian, Scout, ScoutMember, MemberGuardian])],
+  controllers: [UserGeneralController, UsersController],
   providers: [UserGeneralService],
   exports: [UserGeneralService],
 })

@@ -11,7 +11,7 @@ export class CreateLeaderDto {
   warrantExpiryDate: Date;
 
   @IsEnum(LeaderRankEnum)
-  rank: LeaderRankEnum;
+  leaderRank: LeaderRankEnum;
 
   @IsString()
   division: string;

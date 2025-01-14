@@ -8,20 +8,23 @@ import { DataSource, Repository } from 'typeorm';
 import { CreateUserGeneralDto } from '../dto/create-user-general.dto';
 import { UserTypeEnum } from '../../../common/enum/user-type.enum';
 import { Leader } from '../../../entities/user-groups/leader.entity';
+import { MemberGuardian } from '../../../entities/user-groups/member-guardian.entity';
 
 @Injectable()
 export class UserGeneralService {
   constructor(
     @InjectRepository(BaseUserEntity)
-    @InjectRepository(Leader)
-    @InjectRepository(Guardian)
-    @InjectRepository(Scout)
-    @InjectRepository(ScoutMember) //Might be better to separate particular scout sections
     private userRepository: Repository<BaseUserEntity>,
+    @InjectRepository(Leader)
     private leaderRepository: Repository<Leader>,
+    @InjectRepository(Guardian)
     private guardianRepository: Repository<Guardian>,
+    @InjectRepository(Scout)
     private scoutRepository: Repository<Scout>,
+    @InjectRepository(ScoutMember) //Might be better to separate particular scout sections
     private scoutMemberRepository: Repository<ScoutMember>,
+    @InjectRepository(MemberGuardian)
+    private memberGuardianRepository: Repository<MemberGuardian>,
     private dataSource: DataSource
   ) {}
 
@@ -39,29 +42,66 @@ export class UserGeneralService {
     //if email is unique, can create user
     const user = this.userRepository.create(createUserDto);
     return await this.dataSource.transaction(async (manager) => {
-      //create leader
-      if(createUserDto.role === UserTypeEnum.LEADER) {
+      const savedUser = await manager.save(user);
+
+      //create user based on role
+    switch (createUserDto.role) {
+      case UserTypeEnum.LEADER:
+        createUserDto.leaderDetails.id = user.id;
         const leader = this.leaderRepository.create(createUserDto.leaderDetails);
         await manager.save(leader);
-      }
+        break;
 
-      //create guardian
-      if(createUserDto.role === UserTypeEnum.GUARDIAN) {
-        const guardian = this.guardianRepository.create(createUserDto.guardianDetails);
+      case UserTypeEnum.GUARDIAN:
+        createUserDto.guardianDetails.id = user.id;
+        const guardian = this.guardianRepository.create(
+          createUserDto.guardianDetails,
+        );
+        const member = await this.scoutRepository.findOne({ where: { id: createUserDto.guardianDetails.memberId } });
+        const relationship = this.memberGuardianRepository.create({
+          guardian: guardian,
+          scout: member,
+          relationship: createUserDto.guardianDetails.relationship
+        });
         await manager.save(guardian);
-      }
+        await manager.save(relationship);
 
-      //create scout
-      if(createUserDto.role === UserTypeEnum.MEMBER) {
+        break;
+
+      case UserTypeEnum.MEMBER:
+        createUserDto.memberDetails.id = user.id;
         const scout = this.scoutRepository.create(createUserDto.memberDetails);
         await manager.save(scout);
 
-        //create scout member
+        createUserDto.memberDetails.scoutSectionDetails.id = user.id;
+        //TODO: check the validity of PL/APL
         const scoutMember = this.scoutMemberRepository.create(createUserDto.memberDetails.scoutSectionDetails);
         await manager.save(scoutMember);
-      }
+        break;
 
-      return await manager.save(user);
+      default:
+        throw new ConflictException('Invalid user role!');
+    }
+
+      return savedUser;
     })
+  }
+
+  async findAll(): Promise<BaseUserEntity[]> {
+    return await this.userRepository.find();
+
+  }
+
+  async findOne(id1: string) {
+    return await this.userRepository.findOne({ where: { id: id1 } });
+
+  }
+
+  async update(id1: string, createUserGeneralDto: Partial<CreateUserGeneralDto>) {
+
+  }
+
+  async remove(id1: string) {
+
   }
 }

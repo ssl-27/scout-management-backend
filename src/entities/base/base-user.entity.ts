@@ -31,6 +31,6 @@ export abstract class BaseUserEntity extends SMISBaseEntity {
   @Column({ type: 'enum', enum: GenderEnum })
   gender: GenderEnum;
 
-  @Column({ type: 'enum', enum: ['Active', 'Inactive', 'Pending'] })
+  @Column({ type: 'enum', enum: ['Active', 'Inactive', 'Pending'], default: 'Pending' })
   status: string;
 }
