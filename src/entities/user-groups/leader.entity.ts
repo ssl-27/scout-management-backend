@@ -12,7 +12,7 @@ export class Leader {
   @Column({ type: 'date' })
   warrantExpiryDate: Date;
 
-  @Column({ type: 'enum', enum: LeaderRankEnum })
+  @Column({ type: 'enum', enum: LeaderRankEnum, default: LeaderRankEnum.INSTRUCTOR })
   leaderRank: LeaderRankEnum;
 
   @Column()

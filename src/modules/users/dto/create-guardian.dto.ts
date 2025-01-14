@@ -5,6 +5,9 @@ export class CreateGuardianDto {
   @IsString()
   id: string;
 
+  @IsString()
+  memberId: string;
+
   @IsEnum(GuardianRelationshipEnum)
   relationship: GuardianRelationshipEnum;
 
