@@ -15,7 +15,7 @@ export class TrainingItem extends SMISBaseEntity {
   @Column()
   description: string;
 
-  @Column({ type: 'enum', enum: ScoutSectionEnum})
+  @Column({ type: 'enum', enum: ScoutSectionEnum, default: ScoutSectionEnum.SCOUT })
   badgeSection: ScoutSectionEnum;
 
   @ManyToOne(() => BadgeDetailsEntity, badge => badge.trainingItems, {

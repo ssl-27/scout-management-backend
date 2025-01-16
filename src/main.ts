@@ -5,6 +5,9 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 async function bootstrap() {
   console.log('Current NODE_ENV:', process.env.NODE_ENV);
   const app = await NestFactory.create(AppModule);
+  app.enableCors({
+    origin: "*"
+  })
   const config = new DocumentBuilder()
     .setTitle('SMIS API Documentation')
     .setDescription('The API description')

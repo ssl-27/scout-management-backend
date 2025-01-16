@@ -104,4 +104,11 @@ export class UserGeneralService {
   async remove(id1: string) {
 
   }
+
+  async findMembers() {
+    return await this.scoutMemberRepository.createQueryBuilder('scoutMember')
+      .leftJoinAndSelect('scoutMember.id', 'scout')
+      .leftJoinAndSelect('scout.id', 'baseUser')
+      .getMany();
+  }
 }

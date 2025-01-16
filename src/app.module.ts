@@ -7,6 +7,7 @@ import { databaseConfig } from './config/database.config';
 import { AuthModule } from './modules/auth/auth.module';
 import { UserGeneralModule } from './modules/users/modules/user-general.module';
 import { TrainingModule } from './modules/training/training.module';
+import { SeedModule } from './database/seeds/seed.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { TrainingModule } from './modules/training/training.module';
     AuthModule,
     UserGeneralModule,
     TrainingModule,
+    SeedModule,
   ],
   controllers: [AppController],
   providers: [AppService],
