@@ -16,6 +16,11 @@ export class UserGeneralController {
     return this.userGeneralService.findAll();
   }
 
+  @Get("members")
+  findMembers() {
+    return this.userGeneralService.findMembers();
+  }
+
   @Get(":id")
   findOne(@Param("id") id: string) {
     return this.userGeneralService.findOne(id);

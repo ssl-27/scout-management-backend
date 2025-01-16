@@ -1,35 +1,29 @@
 import { CanActivate, ExecutionContext, Injectable } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { RequiredRole, ROLES_KEY } from '../../../common/decorators/roles.decorator';
-import { UserRolesInterface } from '../user-roles.interface';
 
 @Injectable()
 export class RolesGuard implements CanActivate {
   constructor(private reflector: Reflector) {}
 
   canActivate(context: ExecutionContext): boolean {
-    const requiredRoles = this.reflector.getAllAndOverride<RequiredRole[]>(ROLES_KEY, [context.getHandler()]);
-
+    const requiredRoles = this.reflector.getAllAndOverride<RequiredRole[]>(ROLES_KEY, [
+      context.getHandler(),
+      context.getClass(),
+    ]);
 
     if (!requiredRoles) {
       return true;
     }
 
-    const { user } = context.switchToHttp().getRequest();
+    const request = context.switchToHttp().getRequest();
+    const user = request.user; // This comes from your JWT strategy
 
-    const userRoles: UserRolesInterface = user.roles;
-
+    // Check if user has any of the required roles
     return requiredRoles.some(required => {
-      // Check if user is in the required group
-      if (required.group !== userRoles.group) {
-        return false;
-      }
-
-      // If no specific roles are required, any role in the group is fine
-      if (!required.roles || required.roles.length === 0) {
-        return true;
-      }
-      return requiredRoles.some((role) => user.roles?.includes(role));
+      if (required.group !== user.group) return false;
+      if (!required.roles || required.roles.length === 0) return true;
+      return required.roles.includes(user.role);
     });
   }
 }

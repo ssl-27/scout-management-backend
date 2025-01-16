@@ -3,16 +3,20 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Equal, In, Repository } from 'typeorm';
 import { CreateTrainingItemDto } from '../dto/create-training-item.dto';
 import { TrainingItem } from '../../../entities/training/training-item.entity';
+import { BadgeDetailsEntity } from '../../../entities/training/badge-details.entity';
 
 @Injectable()
 export class TrainingItemService {
   constructor(
     @InjectRepository(TrainingItem)
     private readonly trainingItemRepository: Repository<TrainingItem>,
+    @InjectRepository(BadgeDetailsEntity)
+    private readonly badgeRepository: Repository<BadgeDetailsEntity>,
   ) {}
 
   async create(createTrainingItemDto: CreateTrainingItemDto): Promise<TrainingItem> {
     const trainingItem = this.trainingItemRepository.create(createTrainingItemDto);
+    trainingItem.badge = await this.badgeRepository.findOneBy({ id: createTrainingItemDto.badgeId });
     return this.trainingItemRepository.save(trainingItem);
   }
 

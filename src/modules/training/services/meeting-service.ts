@@ -66,18 +66,18 @@ export class MeetingService {
           relations: ['trainingItems', 'attendances', 'attendances.scout']
         });
 
-        console.log('Existing Meeting:', {
-          id: existingMeeting.id,
-          trainingItemsCount: existingMeeting.trainingItems?.length,
-          attendancesCount: existingMeeting.attendances?.length
-        });
+        // console.log('Existing Meeting:', {
+        //   id: existingMeeting.id,
+        //   trainingItemsCount: existingMeeting.trainingItems?.length,
+        //   attendancesCount: existingMeeting.attendances?.length
+        // });
 
         if (!existingMeeting) {
           throw new NotFoundException(`Meeting with ID ${id} not found`);
         }
 
         // Update the meeting
-        await manager.update(MeetingEntity, id, updateMeetingDto);
+
 
         // Handle completion logic
         if (updateMeetingDto.isMeetingCompleted === true && existingMeeting.isMeetingCompleted === false ) {
@@ -99,10 +99,13 @@ export class MeetingService {
 
           console.log('Generated Training Records:', trainingRecords.length);
 
+
           if (trainingRecords.length > 0) {
             await manager.save(TrainingRecordEntity, trainingRecords);
           }
         }
+
+        //await manager.update(MeetingEntity, id, updateMeetingDto);
 
         // Return updated meeting
         return manager.findOne(MeetingEntity, {
