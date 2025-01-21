@@ -9,6 +9,23 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
+    services:
+      # Add PostgreSQL service container for tests
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_DB: scout_management
+          POSTGRES_USER: test_user
+          POSTGRES_PASSWORD: test_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
       - uses: actions/checkout@v2
 
@@ -25,3 +42,29 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      # Add Google Cloud Authentication
+      - name: Google Auth
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+
+      # Setup gcloud CLI
+      - name: Set up Cloud SDK
+        uses: 'google-github-actions/setup-gcloud@v1'
+
+      # Set test database URL for the test phase
+      - name: Test with Database
+        env:
+          DATABASE_URL: postgresql://test_user:test_password@localhost:5432/scout_management
+        run: npm test
+
+      # Configure docker to use gcloud credentials
+      - name: Configure Docker
+        run: gcloud auth configure-docker
+
+      # Build and Push Docker image
+      - name: Build and Push
+        run: |
+          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/scout-management-be:dev-${{ github.sha }} .
+          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/scout-management-be:dev-${{ github.sha }}
