@@ -49,7 +49,7 @@ jobs:
         uses: 'google-github-actions/auth@v1'
         with:
           credentials_json: '${{ secrets.GCP_SA_KEY }}'
-          token_format: ''access_token''
+          token_format: 'access_token'
 
       # Setup gcloud CLI
       - name: Set up Cloud SDK
