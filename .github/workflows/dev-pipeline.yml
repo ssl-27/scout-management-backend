@@ -49,6 +49,7 @@ jobs:
         uses: 'google-github-actions/auth@v1'
         with:
           credentials_json: '${{ secrets.GCP_SA_KEY }}'
+          token_format: ''access_token''
 
       # Setup gcloud CLI
       - name: Set up Cloud SDK
@@ -62,7 +63,8 @@ jobs:
 
       # Configure docker to use gcloud credentials
       - name: Configure Docker
-        run: gcloud auth configure-docker
+        run: |
+          gcloud auth configure-docker asia-east2-docker.pkg.dev
 
       # Build and Push Docker image
       - name: Build and Push
