@@ -9,6 +9,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: develop
 
     services:
       # Add PostgreSQL service container for tests
