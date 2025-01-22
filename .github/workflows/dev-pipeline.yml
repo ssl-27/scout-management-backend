@@ -67,5 +67,5 @@ jobs:
       # Build and Push Docker image
       - name: Build and Push
         run: |
-          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/scout-management-be:dev-${{ github.sha }} .
-          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/scout-management-be:dev-${{ github.sha }}
+          docker build -t ${{ format('asia-east2-docker.pkg.dev/{0}/scout-management-be/api:dev-{1}', secrets.GCP_PROJECT_ID, github.sha) }} .
+          docker push ${{ format('asia-east2-docker.pkg.dev/{0}/scout-management-be/api:dev-{1}', secrets.GCP_PROJECT_ID, github.sha) }}
