@@ -6,6 +6,8 @@ COPY tsconfig.json ./
 RUN npm install
 COPY . .
 RUN npm run build
+RUN echo "=== After build ===" && ls -la && echo "=== Dist folder ===" && ls -la dist/
+
 
 # Development stage
 FROM node:18-alpine
