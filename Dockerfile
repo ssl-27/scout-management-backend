@@ -13,7 +13,9 @@ RUN echo "=== After build ===" && ls -la && echo "=== Dist folder ===" && ls -la
 FROM node:18-alpine
 WORKDIR /usr/src/app
 COPY package*.json ./
-RUN npm install --only=development
-COPY --from=builder /usr/src/app/dist ./dist
+COPY tsconfig.json ./
+RUN npm install
+COPY . .
+RUN npm run build
 EXPOSE 3000
 CMD ["npm", "run", "start:dev"]
