@@ -73,8 +73,13 @@ jobs:
           docker push ${{ format('asia-east2-docker.pkg.dev/{0}/scout-management-be/api:dev-{1}', secrets.GCP_PROJECT_ID, github.sha) }}
 
       - name: Deploy to Cloud Run
+        id: deploy
         uses: google-github-actions/deploy-cloudrun@v1
         with:
           service: scout-management-api
           region: asia-east2
           image: asia-east2-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/scout-management-be/api:dev-${{ github.sha }}
+          flags: --allow-unauthenticated --port=3000
+
+      - name: Show Output
+        run: echo ${{ steps.deploy.outputs.url }}
