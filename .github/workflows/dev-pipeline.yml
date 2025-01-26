@@ -75,6 +75,9 @@ jobs:
                 --build-arg DB_USERNAME=${{secrets.DB_USERNAME}} \
                 --build-arg DB_PASSWORD=${{secrets.DB_PASSWORD}} \
                 --build-arg DB_DATABASE=${{secrets.DB_DATABASE}} \
+                --build-arg EMAIL_USER=${{secrets.EMAIL_USER}} \
+                --build-arg EMAIL_APP_PASSWORD=${{secrets.EMAIL_APP_PASSWORD}} \
+                --build-arg EMAIL_FROM=${{secrets.EMAIL_FROM}} \
                 --build-arg JWT_SECRET=${{secrets.JWT_SECRET}} .
           docker push ${{ format('asia-east2-docker.pkg.dev/{0}/scout-management-be/api:dev-{1}', secrets.GCP_PROJECT_ID, github.sha) }}
 
