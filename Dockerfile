@@ -31,7 +31,8 @@ RUN npm install
 COPY . .
 RUN npm run build
 RUN echo "=== After build ===" && ls -la && echo "=== Dist folder ===" && ls -la dist/
-RUN npm run seed
+RUN echo "=== Starting database seed ===" && \
+    NODE_ENV=development npm run seed || (echo "Seeding failed" && exit 1)
 
 
 # Development stage
