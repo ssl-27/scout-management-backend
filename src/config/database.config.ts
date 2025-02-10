@@ -4,6 +4,8 @@ import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 export const databaseConfig = (
   configService: ConfigService,
 ): TypeOrmModuleOptions => {
+  const environment = configService.get('NODE_ENV') || 'development';
+
   const config = {
     type: 'postgres' as const,
     host: configService.get('DB_HOST'),
@@ -20,5 +22,18 @@ export const databaseConfig = (
     password: '***' // Hide password in logs
   });
 
-  return config;
+  switch (environment) {
+    case 'development':
+      return {
+        ...config,
+        logging: true,
+      };
+    case 'production':
+      return {
+        ...config,
+        synchronize: false,
+      };
+    default:
+      return config;
+  }
 };
