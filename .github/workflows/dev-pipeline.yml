@@ -91,7 +91,10 @@ jobs:
           flags: --allow-unauthenticated
 
       - name: Run Database Seeds
-        run: npm run seed
+        run: |
+          export JWT_SECRET=${{ secrets.JWT_SECRET }}
+          npm run seed
+          
 
       - name: Show Output
         run: echo ${{ steps.deploy.outputs.url }}
