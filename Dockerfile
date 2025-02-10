@@ -42,8 +42,6 @@ COPY tsconfig.json ./
 RUN npm install
 COPY . .
 RUN npm run build
-RUN echo "=== Starting database seed ===" && \
-    NODE_ENV=development npm run seed || (echo "Seeding failed" && exit 1)
 EXPOSE 3000
 
 ARG DB_HOST
@@ -60,5 +58,8 @@ ENV DB_DATABASE=$DB_DATABASE
 
 ARG JWT_SECRET
 ENV JWT_SECRET=$JWT_SECRET
+
+RUN echo "=== Starting database seed ===" && \
+    NODE_ENV=development npm run seed || (echo "Seeding failed" && exit 1)
 
 CMD ["npm", "run", "start:dev"]
