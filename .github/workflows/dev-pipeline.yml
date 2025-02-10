@@ -90,5 +90,8 @@ jobs:
           image: asia-east2-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/scout-management-be/api:dev-${{ github.sha }}
           flags: --allow-unauthenticated
 
+      - name: Run Database Seeds
+        run: npm run seed
+
       - name: Show Output
         run: echo ${{ steps.deploy.outputs.url }}
