@@ -89,11 +89,6 @@ jobs:
           region: asia-east2
           image: asia-east2-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/scout-management-be/api:dev-${{ github.sha }}
           flags: --allow-unauthenticated
-
-      - name: Run Database Seeds
-        run: |
-          export JWT_SECRET=${{ secrets.JWT_SECRET }}
-          npm run seed
           
 
       - name: Show Output
