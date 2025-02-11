@@ -21,6 +21,7 @@ import { faker } from '@faker-js/faker/locale/zh_TW';
 import { ScoutSectionEnum } from '../../common/enum/scout-section.enum';
 import { LeaderRankEnum } from '../../common/enum/leader-rank.enum';
 import { TEST_EMAIL_ACCOUNTS } from './data/test-email-accounts';
+import { GuardianRelationshipEnum } from '../../common/enum/guardian-relationship.enum';
 
 @Injectable()
 export class Seeder {
@@ -155,9 +156,12 @@ export class Seeder {
       savedLeaders.push(await this.leaderRepository.save(leaderEntity));
 
       //choose 1 SL to change the accounts email for testing
-      const leaderTestAccount = await this.leaderRepository.findOneBy({ leaderRank: LeaderRankEnum.SL });
-      leaderTestAccount.email = TEST_EMAIL_ACCOUNTS.LEADER;
-      await this.leaderRepository.save(leaderTestAccount);
+      const leaderTestAccount = await this.leaderRepository.findOneBy({
+        leaderRank: LeaderRankEnum.SL,
+      });
+      const testAccount = await this.baseUserRepository.findOneBy({ id: leaderTestAccount.id });
+      testAccount.email = TEST_EMAIL_ACCOUNTS.LEADER;
+      await this.baseUserRepository.save(testAccount);
     }
 
     return savedLeaders;
@@ -223,13 +227,17 @@ export class Seeder {
       savedGuardians.push(guardianEntity);
     }
 
-    const guardianTestAccount = await this.guardianRepository.findOneBy({ relationship: 'Parent' });
-    guardianTestAccount.email = TEST_EMAIL_ACCOUNTS.GUARDIAN;
-    await this.guardianRepository.save(guardianTestAccount);
+    const guardianTestAccount = await this.guardianRepository.findOneBy({
+      relationship: GuardianRelationshipEnum.GUARDIAN,
+    });
+    const testAccount = await this.baseUserRepository.findOneBy({ id: guardianTestAccount.id });
+    testAccount.email = TEST_EMAIL_ACCOUNTS.GUARDIAN;
+    await this.baseUserRepository.save(testAccount);
 
-    const memberTestAccount = await this.scoutRepository.findOneBy({ id: guardianTestAccount.memberId });
+    const memberTest = await this.memberGuardianRepository.findOneBy({ guardian: { id: guardianTestAccount.id } });
+    const memberTestAccount = await this.baseUserRepository.findOneBy({ id: memberTest.scout.id });
     memberTestAccount.email = TEST_EMAIL_ACCOUNTS.MEMBER;
-    await this.scoutRepository.save(memberTestAccount);
+    await this.baseUserRepository.save(memberTestAccount);
 
     return savedGuardians;
   }
@@ -280,11 +288,9 @@ export class Seeder {
         }),
       );
 
-      const savedTrainingItems =
-        await this.trainingItemRepository.save(trainingItems);
-
       // Step 3: Update the meeting with the linked training items
-      savedMeeting.trainingItems = savedTrainingItems;
+      savedMeeting.trainingItems =
+        await this.trainingItemRepository.save(trainingItems);
       await this.meetingRepository.save(savedMeeting);
 
       // Step 4: Create random attendance records for the meeting
