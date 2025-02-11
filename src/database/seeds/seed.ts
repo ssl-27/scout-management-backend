@@ -19,6 +19,8 @@ import { generateMeetings } from './entities/meeting.seed';
 import { generateBadges } from './entities/badge.seed';
 import { faker } from '@faker-js/faker/locale/zh_TW';
 import { ScoutSectionEnum } from '../../common/enum/scout-section.enum';
+import { LeaderRankEnum } from '../../common/enum/leader-rank.enum';
+import { TEST_EMAIL_ACCOUNTS } from './data/test-email-accounts';
 
 @Injectable()
 export class Seeder {
@@ -89,7 +91,8 @@ export class Seeder {
   private async clearExistingData() {
     try {
       // Using queryRunner to handle transactions
-      const queryRunner = this.baseUserRepository.manager.connection.createQueryRunner();
+      const queryRunner =
+        this.baseUserRepository.manager.connection.createQueryRunner();
       await queryRunner.connect();
       await queryRunner.startTransaction();
 
@@ -100,7 +103,9 @@ export class Seeder {
         // First, clear junction tables and dependent tables
         await queryRunner.query('DELETE FROM "training_record_entity"');
         await queryRunner.query('DELETE FROM "attendance"');
-        await queryRunner.query('DELETE FROM "meeting_entity_training_items_training_item"');
+        await queryRunner.query(
+          'DELETE FROM "meeting_entity_training_items_training_item"',
+        );
         await queryRunner.query('DELETE FROM "member_guardian"');
 
         // Then clear main entity tables
@@ -144,10 +149,15 @@ export class Seeder {
         id: baseUser.id,
         warrantExpiryDate: leader.warrantExpiryDate,
         leaderRank: leader.leaderRank,
-        division: leader.division
+        division: leader.division,
       });
 
       savedLeaders.push(await this.leaderRepository.save(leaderEntity));
+
+      //choose 1 SL to change the accounts email for testing
+      const leaderTestAccount = await this.leaderRepository.findOneBy({ leaderRank: LeaderRankEnum.SL });
+      leaderTestAccount.email = TEST_EMAIL_ACCOUNTS.LEADER;
+      await this.leaderRepository.save(leaderTestAccount);
     }
 
     return savedLeaders;
@@ -169,14 +179,14 @@ export class Seeder {
         dateOfBirth: scout.dateOfBirth,
         section: scout.section,
         investitureDate: scout.investitureDate,
-        dateJoined: scout.dateJoined
+        dateJoined: scout.dateJoined,
       });
       await this.scoutRepository.save(scoutEntity);
 
       // Create scout member details
       const scoutMemberEntity = this.scoutMemberRepository.create({
         id: baseUser.id,
-        ...scout.scoutSectionDetails
+        ...scout.scoutSectionDetails,
       });
       await this.scoutMemberRepository.save(scoutMemberEntity);
 
@@ -187,7 +197,7 @@ export class Seeder {
   }
 
   private async seedGuardians(scouts: Scout[]): Promise<Guardian[]> {
-    const guardianData = generateGuardians(scouts.map(scout => scout.id));
+    const guardianData = generateGuardians(scouts.map((scout) => scout.id));
     const savedGuardians = [];
 
     for (const guardian of guardianData) {
@@ -198,7 +208,7 @@ export class Seeder {
       // Create guardian
       const guardianEntity = this.guardianRepository.create({
         id: baseUser.id,
-        relationship: guardian.relationship
+        relationship: guardian.relationship,
       });
       await this.guardianRepository.save(guardianEntity);
 
@@ -206,17 +216,23 @@ export class Seeder {
       const memberGuardian = this.memberGuardianRepository.create({
         scout: { id: guardian.memberId },
         guardian: { id: guardianEntity.id },
-        relationship: guardian.relationship
+        relationship: guardian.relationship,
       });
       await this.memberGuardianRepository.save(memberGuardian);
 
       savedGuardians.push(guardianEntity);
     }
 
+    const guardianTestAccount = await this.guardianRepository.findOneBy({ relationship: 'Parent' });
+    guardianTestAccount.email = TEST_EMAIL_ACCOUNTS.GUARDIAN;
+    await this.guardianRepository.save(guardianTestAccount);
+
+    const memberTestAccount = await this.scoutRepository.findOneBy({ id: guardianTestAccount.memberId });
+    memberTestAccount.email = TEST_EMAIL_ACCOUNTS.MEMBER;
+    await this.scoutRepository.save(memberTestAccount);
+
     return savedGuardians;
   }
-
-
 
   private async seedBadges(): Promise<BadgeDetailsEntity[]> {
     const badgeData = generateBadges(20);
@@ -233,7 +249,7 @@ export class Seeder {
           title: `Training Item ${i + 1} for ${badge.title}`,
           description: `Description for training item ${i + 1}`,
           badgeSection: badge.badgeSection,
-          badge: savedBadge
+          badge: savedBadge,
         });
         await this.trainingItemRepository.save(trainingItem);
       }
@@ -254,7 +270,9 @@ export class Seeder {
       const savedMeeting = await this.meetingRepository.save(meetingEntity);
 
       // Step 2: Create and save the training items for this meeting
-      const trainingItems = Array.from({ length: faker.number.int({ min: 1, max: 5 }) }).map(() =>
+      const trainingItems = Array.from({
+        length: faker.number.int({ min: 1, max: 5 }),
+      }).map(() =>
         this.trainingItemRepository.create({
           title: faker.lorem.words(3),
           description: faker.lorem.sentences(2),
@@ -262,14 +280,18 @@ export class Seeder {
         }),
       );
 
-      const savedTrainingItems = await this.trainingItemRepository.save(trainingItems);
+      const savedTrainingItems =
+        await this.trainingItemRepository.save(trainingItems);
 
       // Step 3: Update the meeting with the linked training items
       savedMeeting.trainingItems = savedTrainingItems;
       await this.meetingRepository.save(savedMeeting);
 
       // Step 4: Create random attendance records for the meeting
-      const randomScouts = this.getRandomItems(scouts, Math.floor(scouts.length * 0.7)); // 70% of scouts
+      const randomScouts = this.getRandomItems(
+        scouts,
+        Math.floor(scouts.length * 0.7),
+      ); // 70% of scouts
       for (const scout of randomScouts) {
         const attendance = this.attendanceRepository.create({
           meetingDate: savedMeeting.meetingDateStart,
@@ -283,10 +305,11 @@ export class Seeder {
       savedMeetings.push(savedMeeting);
     }
 
-    console.log('Meetings with training items and attendance seeded successfully!');
+    console.log(
+      'Meetings with training items and attendance seeded successfully!',
+    );
     return savedMeetings;
   }
-
 
   // private async seedMeetingsWithTrainingItems(): Promise<void> {
   //   const meetingData = generateMeetings(10); // Assuming this generates the base meeting data
@@ -315,7 +338,6 @@ export class Seeder {
   //
   //   console.log('Meetings with training items seeded successfully!');
   // }
-
 
   private getRandomItems<T>(array: T[], count: number): T[] {
     const shuffled = [...array].sort(() => 0.5 - Math.random());
