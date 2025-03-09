@@ -19,9 +19,8 @@ import { generateMeetings } from './entities/meeting.seed';
 import { generateBadges } from './entities/badge.seed';
 import { faker } from '@faker-js/faker/locale/zh_TW';
 import { ScoutSectionEnum } from '../../common/enum/scout-section.enum';
-import { LeaderRankEnum } from '../../common/enum/leader-rank.enum';
 import { TEST_EMAIL_ACCOUNTS } from './data/test-email-accounts';
-import { GuardianRelationshipEnum } from '../../common/enum/guardian-relationship.enum';
+import { UserTypeEnum } from '../../common/enum/user-type.enum';
 
 @Injectable()
 export class Seeder {
@@ -82,6 +81,12 @@ export class Seeder {
       const meetings = await this.seedMeetings(scouts);
       console.log(`Created ${meetings.length} meetings`);
 
+      // Seed test users with email accounts
+      const testUsersWithEmail = await this.seedTestUsersWithEmail();
+      console.log(
+        `Created ${testUsersWithEmail.length} test users with email accounts`,
+      );
+
       console.log('Seeding completed successfully!');
     } catch (error) {
       console.error('Seeding failed:', error);
@@ -136,6 +141,39 @@ export class Seeder {
     }
   }
 
+  private async seedTestUsersWithEmail(): Promise<BaseUserEntity[]> {
+    const savedTestUsers = [];
+    //choose 1 Leader to change the accounts email for testing
+    const leaderTestAccount = await this.leaderRepository.findOneBy({});
+    const testLeaderAccount = await this.baseUserRepository.findOneBy({
+      role: UserTypeEnum.LEADER,
+    });
+    testLeaderAccount.email = TEST_EMAIL_ACCOUNTS.LEADER;
+    savedTestUsers.push(await this.baseUserRepository.save(testLeaderAccount));
+
+    //choose 1 scout to change the accounts email for testing
+    const testScoutAccount = await this.baseUserRepository.findOneBy({
+      role: UserTypeEnum.MEMBER,
+    });
+    testScoutAccount.email = TEST_EMAIL_ACCOUNTS.MEMBER;
+    savedTestUsers.push(await this.baseUserRepository.save(testScoutAccount));
+
+    //choose 1 guardian to change the accounts email for testing
+    const guardianTestAccount = await this.memberGuardianRepository.findOne({
+      where: { scout: { id: testScoutAccount.id } },
+      relations: ['guardian'],
+    });
+    const testGuardianAccount = await this.baseUserRepository.findOneBy({
+      id: guardianTestAccount.guardian.id,
+    });
+    testGuardianAccount.email = TEST_EMAIL_ACCOUNTS.GUARDIAN;
+    savedTestUsers.push(
+      await this.baseUserRepository.save(testGuardianAccount),
+    );
+
+    return savedTestUsers;
+  }
+
   private async seedLeaders(): Promise<Leader[]> {
     const leaderData = generateLeaders(10);
     const savedLeaders = [];
@@ -154,14 +192,6 @@ export class Seeder {
       });
 
       savedLeaders.push(await this.leaderRepository.save(leaderEntity));
-
-      //choose 1 SL to change the accounts email for testing
-      const leaderTestAccount = await this.leaderRepository.findOneBy({
-        leaderRank: LeaderRankEnum.SL,
-      });
-      const testAccount = await this.baseUserRepository.findOneBy({ id: leaderTestAccount.id });
-      testAccount.email = TEST_EMAIL_ACCOUNTS.LEADER;
-      await this.baseUserRepository.save(testAccount);
     }
 
     return savedLeaders;
@@ -226,19 +256,6 @@ export class Seeder {
 
       savedGuardians.push(guardianEntity);
     }
-
-    const guardianTestAccount = await this.guardianRepository.findOneBy({
-      relationship: GuardianRelationshipEnum.GUARDIAN,
-    });
-    const testAccount = await this.baseUserRepository.findOneBy({ id: guardianTestAccount.id });
-    testAccount.email = TEST_EMAIL_ACCOUNTS.GUARDIAN;
-    await this.baseUserRepository.save(testAccount);
-
-    const memberTest = await this.memberGuardianRepository.findOneBy({ guardian: { id: guardianTestAccount.id } });
-    const memberTestAccount = await this.baseUserRepository.findOneBy({ id: memberTest.scout.id });
-    memberTestAccount.email = TEST_EMAIL_ACCOUNTS.MEMBER;
-    await this.baseUserRepository.save(memberTestAccount);
-
     return savedGuardians;
   }
 
