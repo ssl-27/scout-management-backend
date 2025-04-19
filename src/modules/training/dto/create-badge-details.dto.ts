@@ -4,6 +4,7 @@ import { ScoutSectionEnum } from '../../../common/enum/scout-section.enum';
 import { Type } from 'class-transformer';
 import { CreateAttendanceDto } from './create-attendance.dto';
 import { CreateTrainingItemDto } from './create-training-item.dto';
+import { BadgeTypeEnum } from '../../../common/enum/badge-type.enum';
 
 export class CreateBadgeDetailsDto {
   @IsNotEmpty()
@@ -18,6 +19,10 @@ export class CreateBadgeDetailsDto {
   @IsEnum(ScoutSectionEnum)
   badgeSection: ScoutSectionEnum;
 
+  @IsEnum(BadgeTypeEnum)
+  @IsOptional()
+  badgeType: BadgeTypeEnum = BadgeTypeEnum.OTHER;
+
   @IsArray()
   @IsUUID('4', { each: true })
   trainingItemIds: string[];
@@ -27,4 +32,9 @@ export class CreateBadgeDetailsDto {
   @ValidateNested({ each: true })
   @Type(() => CreateTrainingItemDto)
   trainingItems: CreateTrainingItemDto[];
+
+  @IsArray()
+  @IsOptional()
+  @IsUUID('4', { each: true })
+  prerequisiteBadgeIds: string[];
 }

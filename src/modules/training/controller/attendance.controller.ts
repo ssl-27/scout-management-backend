@@ -1,4 +1,4 @@
-// src/controllers/attendance.controller.ts
+// src/controllers/attendance.controllers.ts
 import {
   Body,
   Controller,
@@ -29,15 +29,18 @@ export class AttendanceController {
   @RequireRoles(
     {
       group: UserTypeEnum.MEMBER,
-      roles: [ScoutSectionRankEnum.PL, ScoutSectionRankEnum.APL],
+      roles: [
+        ScoutSectionRankEnum.PL,
+        ScoutSectionRankEnum.APL,
+        ScoutSectionRankEnum.SPL,
+      ],
     },
     { group: UserTypeEnum.LEADER },
   )
   create(
     @Body() createAttendanceDto: CreateAttendanceDto,
-    @CurrentUser() user,
   ) {
-    return this.attendanceService.create(createAttendanceDto, user);
+    return this.attendanceService.markAttendance(createAttendanceDto);
   }
 
   @Post('batch')
@@ -60,15 +63,11 @@ export class AttendanceController {
     return this.attendanceService.findAll();
   }
 
-
-
   @Get('my-records')
   @RequireRoles({ group: UserTypeEnum.MEMBER })
   findMyAttendance(@CurrentUser() user) {
     return this.attendanceService.findAllForMember(user.userId);
   }
-
-
 
   @Get('meeting/:id')
   @RequireRoles({ group: UserTypeEnum.LEADER })
@@ -90,13 +89,21 @@ export class AttendanceController {
     @CurrentUser() user,
   ) {
     const userIdArray = userIds.split(',');
-    return this.attendanceService.findByMeetingAndUsers(meetingId, userIdArray, user);
+    return this.attendanceService.findByMeetingAndUsers(
+      meetingId,
+      userIdArray,
+      user,
+    );
   }
 
   @Get('meeting/:meetingId/patrol/')
   @RequireRoles({
     group: UserTypeEnum.MEMBER,
-    roles: [ScoutSectionRankEnum.PL, ScoutSectionRankEnum.APL],
+    roles: [
+      ScoutSectionRankEnum.PL,
+      ScoutSectionRankEnum.APL,
+      ScoutSectionRankEnum.SPL,
+    ],
   })
   async findByMeetingAndPatrol(
     @Param('meetingId') meetingId: string,
@@ -137,7 +144,11 @@ export class AttendanceController {
   }
 
   @Get(':id')
-  @RequireRoles({ group: UserTypeEnum.MEMBER }, { group: UserTypeEnum.LEADER }, {group: UserTypeEnum.GUARDIAN})
+  @RequireRoles(
+    { group: UserTypeEnum.MEMBER },
+    { group: UserTypeEnum.LEADER },
+    { group: UserTypeEnum.GUARDIAN },
+  )
   findOne(@Param('id') id: string, @CurrentUser() user) {
     return this.attendanceService.findOne(id, user);
   }

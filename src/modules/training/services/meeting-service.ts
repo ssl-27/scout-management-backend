@@ -1,125 +1,202 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { DataSource, Repository } from 'typeorm';
-import { CreateMeetingDto } from '../dto/create-meeting.dto';
+import { In, Repository } from 'typeorm';
 import { MeetingEntity } from '../../../entities/training/meeting.entity';
-import { TrainingRecordEntity } from '../../../entities/training/training-record.entity';
-import { AttendanceService } from './attendance.service';
-import { TrainingItemService } from './training-item.service';
-import { ScoutSectionEnum } from '../../../common/enum/scout-section.enum';
+import { BadgeRequirement } from '../../../entities/badge/badge-requirement.entity';
+import { MemberRequirement } from '../../../entities/badge/member-requirement.entity';
+import { Badge, BadgeGroup, BadgeType } from '../../../entities/badge/badge.entity';
+import { MemberBadge } from '../../../entities/badge/member-badge.entity';
 
 @Injectable()
 export class MeetingService {
   constructor(
     @InjectRepository(MeetingEntity)
     private readonly meetingRepository: Repository<MeetingEntity>,
-    @InjectRepository(TrainingRecordEntity)
-    private readonly trainingRecordRepository: Repository<TrainingRecordEntity>,
-    private dataSource: DataSource,
-    private readonly attendanceService: AttendanceService,
-    private readonly trainingItemService: TrainingItemService,
+    @InjectRepository(MemberRequirement)
+    private readonly memberRequirementRepository: Repository<MemberRequirement>,
+    @InjectRepository(BadgeRequirement)
+    private readonly badgeRequirementRepository: Repository<BadgeRequirement>,
+    @InjectRepository(Badge)
+    private readonly badgeRepository: Repository<Badge>,
+    @InjectRepository(MemberBadge)
+    private readonly memberBadgeRepository: Repository<MemberBadge>,
+
   ) {}
 
-  async create(createMeetingDto: CreateMeetingDto): Promise<MeetingEntity> {
-    console.log('DTO received:', createMeetingDto);
-    console.log('Training Item IDs:', createMeetingDto.trainingItemIds);
-    console.log(
-      'Type of trainingItemIds:',
-      typeof createMeetingDto.trainingItemIds,
-    );
-    console.log('Is Array:', Array.isArray(createMeetingDto.trainingItemIds));
+  async create(createMeetingDto: any): Promise<MeetingEntity> {
+    const meeting = this.meetingRepository.create({
+      title: createMeetingDto.title,
+      meetingDateStart: createMeetingDto.meetingDateStart,
+      meetingDateEnd: createMeetingDto.meetingDateEnd,
+      location: createMeetingDto.location,
+      description: createMeetingDto.description,
+      isMeetingCompleted: false,
+    });
 
-    const meeting = this.meetingRepository.create(createMeetingDto);
-
-    try {
-      meeting.trainingItems = await this.trainingItemService.findBatch(
-        createMeetingDto.trainingItemIds,
-      );
-      return await this.meetingRepository.save(meeting);
-    } catch (error) {
-      console.error('Error creating meeting:', error);
-      throw error;
+    // Handle badge requirements
+    if (createMeetingDto.requirementIds && createMeetingDto.requirementIds.length > 0) {
+      meeting.coveredRequirements = await this.badgeRequirementRepository.findBy({
+        id: In(createMeetingDto.requirementIds),
+      });
     }
+
+    // Handle proficiency badges (interest group)
+    if (createMeetingDto.proficiencyBadgeIds && createMeetingDto.proficiencyBadgeIds.length > 0) {
+      meeting.proficiencyBadges = await this.badgeRepository.findBy({
+        id: In(createMeetingDto.proficiencyBadgeIds),
+        type: BadgeType.PROFICIENCY,
+        group: BadgeGroup.INTEREST
+      });
+    }
+
+    return this.meetingRepository.save(meeting);
   }
-  // In your meeting service
-  async findAll() {
-    return await this.meetingRepository.find({
-      relations: ['trainingItems'],
+  async findAll(): Promise<MeetingEntity[]> {
+    return this.meetingRepository.find({
+      relations: ['coveredRequirements'],
+      order: { meetingDateStart: 'DESC' },
     });
   }
 
-  // In your meeting service
-  async findOne(meetingId: string) {
-    return await this.meetingRepository
-      .createQueryBuilder('meeting')
-      .leftJoinAndSelect('meeting.trainingItems', 'trainingItems')
-      .where('meeting.id = :id', { id: meetingId })
-      .getOne();
-  }
-
-  async update(id: string, updateMeetingDto: Partial<CreateMeetingDto>): Promise<MeetingEntity> {
-    return this.dataSource.transaction(async manager => {
-      try {
-        // Get the meeting with relationships
-        const existingMeeting = await manager.findOne(MeetingEntity, {
-          where: { id },
-          relations: ['trainingItems', 'attendances', 'attendances.scout']
-        });
-
-        // console.log('Existing Meeting:', {
-        //   id: existingMeeting.id,
-        //   trainingItemsCount: existingMeeting.trainingItems?.length,
-        //   attendancesCount: existingMeeting.attendances?.length
-        // });
-
-        if (!existingMeeting) {
-          throw new NotFoundException(`Meeting with ID ${id} not found`);
-        }
-
-        // Update the meeting
-
-
-        // Handle completion logic
-        if (updateMeetingDto.isMeetingCompleted === true && existingMeeting.isMeetingCompleted === false ) {
-          console.log('Training Items:', existingMeeting.trainingItems);
-          console.log('Attendances:', existingMeeting.attendances);
-
-          const trainingRecords = existingMeeting.attendances.flatMap(attendance => {
-            console.log('Processing attendance:', attendance);
-            return existingMeeting.trainingItems.map(trainingItem => {
-              console.log('Creating record for training item:', trainingItem);
-              return manager.create(TrainingRecordEntity, {
-                scout: attendance.scout,
-                trainingItem: trainingItem,
-                dateCompleted: new Date(),
-                itemSection: trainingItem.badgeSection
-              });
-            });
-          });
-
-          console.log('Generated Training Records:', trainingRecords.length);
-
-
-          if (trainingRecords.length > 0) {
-            await manager.save(TrainingRecordEntity, trainingRecords);
-          }
-        }
-
-        //await manager.update(MeetingEntity, id, updateMeetingDto);
-
-        // Return updated meeting
-        return manager.findOne(MeetingEntity, {
-          where: { id },
-          relations: ['trainingItems']
-        });
-      } catch (error) {
-        console.error('Error in update:', error);
-        throw error;
-      }
+  async findOne(id: string): Promise<MeetingEntity> {
+    const meeting = await this.meetingRepository.findOne({
+      where: { id },
+      relations: [
+        'coveredRequirements',
+        'coveredRequirements.badge',
+        'proficiencyBadges',
+        'attendances',
+        'attendances.scout'
+      ],
     });
+
+    if (!meeting) {
+      throw new NotFoundException(`Meeting with ID ${id} not found`);
+    }
+
+    return meeting;
+  }
+  async update(id: string, updateMeetingDto: any): Promise<MeetingEntity> {
+    const meeting = await this.findOne(id);
+
+    // Update simple fields
+    if (updateMeetingDto.title) meeting.title = updateMeetingDto.title;
+    if (updateMeetingDto.location) meeting.location = updateMeetingDto.location;
+    if (updateMeetingDto.description) meeting.description = updateMeetingDto.description;
+    if (updateMeetingDto.meetingDateStart) meeting.meetingDateStart = updateMeetingDto.meetingDateStart;
+    if (updateMeetingDto.meetingDateEnd) meeting.meetingDateEnd = updateMeetingDto.meetingDateEnd;
+    if (updateMeetingDto.isMeetingCompleted !== undefined) {
+      meeting.isMeetingCompleted = updateMeetingDto.isMeetingCompleted;
+    }
+
+    // Update requirements if provided
+    if (updateMeetingDto.requirementIds) {
+      meeting.coveredRequirements = await this.badgeRequirementRepository.findBy({
+        id: In(updateMeetingDto.requirementIds),
+      });
+    }
+
+    // Update proficiency badges if provided
+    if (updateMeetingDto.proficiencyBadgeIds) {
+      meeting.proficiencyBadges = await this.badgeRepository.findBy({
+        id: In(updateMeetingDto.proficiencyBadgeIds),
+        type: BadgeType.PROFICIENCY,
+        group: BadgeGroup.INTEREST
+      });
+    }
+
+    await this.meetingRepository.save(meeting);
+    return this.findOne(id);
   }
 
   async remove(id: string): Promise<void> {
-    await this.meetingRepository.delete(id);
+    const meeting = await this.findOne(id);
+    await this.meetingRepository.remove(meeting);
   }
-}
+
+  async completeMeeting(id: string, leaderId: string): Promise<MeetingEntity> {
+    const meeting = await this.meetingRepository.findOne({
+      where: { id },
+      relations: [
+        'coveredRequirements',
+        'proficiencyBadges',
+        'attendances',
+        'attendances.scout'
+      ],
+    });
+
+    if (!meeting) {
+      throw new NotFoundException(`Meeting with ID ${id} not found`);
+    }
+
+    if (meeting.isMeetingCompleted) {
+      return meeting; // Already completed
+    }
+
+    meeting.isMeetingCompleted = true;
+    await this.meetingRepository.save(meeting);
+
+    // Filter to only include attendees who were present
+    const presentAttendees = meeting.attendances.filter(a => a.attendance === 'Present');
+
+    // Process badge requirements for attendees
+    if (meeting.coveredRequirements?.length > 0 && presentAttendees.length > 0) {
+      for (const attendance of presentAttendees) {
+        for (const requirement of meeting.coveredRequirements) {
+          // Check if record already exists
+          const existingRecord = await this.memberRequirementRepository.findOne({
+            where: {
+              scout: { id: attendance.scout.id },
+              requirement: { id: requirement.id },
+            },
+          });
+
+          if (!existingRecord) {
+            const memberRequirement = this.memberRequirementRepository.create({
+              scout: attendance.scout,
+              requirement: requirement,
+              completionDate: new Date(),
+              approvedBy: { id: leaderId },
+              completedInMeeting: meeting,
+              remarks: `Completed during meeting: ${meeting.title}`,
+            });
+
+            await this.memberRequirementRepository.save(memberRequirement);
+          }
+        }
+      }
+    }
+
+    // Process proficiency badges for attendees
+    if (meeting.proficiencyBadges?.length > 0 && presentAttendees.length > 0) {
+      for (const attendance of presentAttendees) {
+        for (const badge of meeting.proficiencyBadges) {
+          // Check if the badge is already awarded to this scout
+          const existingBadge = await this.memberBadgeRepository.findOne({
+            where: {
+              scout: { id: attendance.scout.id },
+              badge: { id: badge.id },
+            },
+          });
+
+          if (!existingBadge) {
+            // Create new member badge record
+            const memberBadge = this.memberBadgeRepository.create({
+              scout: attendance.scout,
+              badge: badge,
+              completionDate: new Date(),
+              approvedBy: { id: leaderId },
+              isApproved: true,
+              remarks: `Awarded during meeting: ${meeting.title}`,
+              progressPercentage: 100, // Proficiency badges are awarded fully
+            });
+
+            await this.memberBadgeRepository.save(memberBadge);
+            console.log(`Awarded proficiency badge ${badge.id} to scout ${attendance.scout.id}`);
+          }
+        }
+      }
+    }
+
+    return meeting;
+  }}

@@ -1,11 +1,11 @@
-// src/modules/users/users.controller.ts
+// src/modules/users/users.controllers.ts
 import { Controller, Get, UseGuards } from '@nestjs/common';
 import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard';
 import { CurrentUser } from '../../../common/decorators/current-user.decorator';
 
 
 @Controller('users')
-@UseGuards(JwtAuthGuard)  // Protect all routes in this controller
+@UseGuards(JwtAuthGuard)  // Protect all routes in this controllers
 export class UsersController {
   @Get('me')
   getCurrentUser(@CurrentUser() user) {

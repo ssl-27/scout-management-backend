@@ -78,7 +78,7 @@ export class AuthService {
       where: { email: dto.email },
     });
 
-    const payload = { email: user.email, sub: user.id, group: user.role };
+    const payload = { email: user.email, sub: user.id, group: user.role, firstName: user.firstName, lastName: user.lastName };
 
     switch (user.role) {
       case UserTypeEnum.LEADER: {
@@ -98,7 +98,7 @@ export class AuthService {
         const scout = await this.scoutRepository.findOne({ where: { id: user.id } });
         const scoutMember = await this.scoutMemberRepository.findOne({ where: { id: user.id } });
         payload['section'] = scout.section;
-        payload['rank'] = scoutMember.scoutSectionRank;
+        payload['role'] = scoutMember.scoutSectionRank;
         payload['patrol'] = scoutMember.patrol;
         break;
       }

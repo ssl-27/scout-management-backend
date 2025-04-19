@@ -25,13 +25,30 @@ export class EmailService {
       from: this.configService.get<string>('EMAIL_FROM'),
       to: email,
       subject: 'OTP Verification',
-      html: `Your OTP is ${otp}`,
+      html: `hi, welcome to SCOUT MANAGEMENT INFORMATION SYSTEM. 
+            <p> This is the DEVELOP Environment</p>. 
+            Your OTP is ${otp}`,
     };
 
     try {
       await this.transporter.sendMail(mailOptions);
     } catch (error) {
       throw new Error(`Error sending OTP email: ${error}`);
+    }
+  }
+
+  async sendEmail(email: string, title: string, content:string) : Promise<void> {
+    const mailOptions = {
+      from: this.configService.get<string>('EMAIL_FROM'),
+      to: email,
+      subject: title,
+      html: `<h1>Notice from SMIS</h1><p>${content}</p>`,
+    };
+
+    try {
+      await this.transporter.sendMail(mailOptions);
+    } catch (error) {
+      throw new Error(`Error sending verification email: ${error}`);
     }
   }
 }
