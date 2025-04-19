@@ -1,0 +1,53 @@
+==== Generating token for LEADER ====
+Found user: 建輝 賴 (smis-2025-leader-dev@maildrop.cc)
+Leader rank: Assistant Venture Scout Leader, Division: New Territories Region - Yuen Long District
+
+LEADER TOKEN:
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNtaXMtMjAyNS1sZWFkZXItZGV2QG1haWxkcm9wLmNjIiwic3ViIjoiMTM2NjZjM2ItNjljNC00ODhhLWI2YmEtOGZlOTk1N2Y2ZWM2IiwiZ3JvdXAiOiJMRUFERVIiLCJyb2xlIjoiQXNzaXN0YW50IFZlbnR1cmUgU2NvdXQgTGVhZGVyIiwiZGl2aXNpb24iOiJOZXcgVGVycml0b3JpZXMgUmVnaW9uIC0gWXVlbiBMb25nIERpc3RyaWN0IiwiaWF0IjoxNzQyNTY3ODMzLCJleHAiOjE3NzQxMDM4MzN9.2MtuyJ6iBVKAJKcbCuPxgweyUjUsOp0y7Fb-CYds-0Q
+
+LEADER PAYLOAD:
+{
+  email: 'smis-2025-leader-dev@maildrop.cc',
+  sub: '13666c3b-69c4-488a-b6ba-8fe9957f6ec6',
+  group: 'LEADER',
+  role: 'Assistant Venture Scout Leader',
+  division: 'New Territories Region - Yuen Long District',
+  iat: 1742567833,
+  exp: 1774103833
+}
+
+==== Generating token for MEMBER ====
+Found user: 旭堯 姚 (smis-2025-member-dev@maildrop.cc)
+Scout section: SCOUT, Rank: Senior Patrol Leader, Patrol: Bull
+
+MEMBER TOKEN:
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNtaXMtMjAyNS1tZW1iZXItZGV2QG1haWxkcm9wLmNjIiwic3ViIjoiNGZmZmM1YjMtMDQ0Yy00MTUwLThlNjEtZjEzNWYyYWQ5YTRjIiwiZ3JvdXAiOiJNRU1CRVIiLCJzZWN0aW9uIjoiU0NPVVQiLCJyYW5rIjoiU2VuaW9yIFBhdHJvbCBMZWFkZXIiLCJwYXRyb2wiOiJCdWxsIiwiaWF0IjoxNzQyNTY3ODMzLCJleHAiOjE3NzQxMDM4MzN9.a8Kay9F55L5QgUJF2z5FmGisz99SleYMM_LGWxrYI_Q
+
+MEMBER PAYLOAD:
+{
+  email: 'smis-2025-member-dev@maildrop.cc',
+  sub: '4fffc5b3-044c-4150-8e61-f135f2ad9a4c',
+  group: 'MEMBER',
+  section: 'SCOUT',
+  rank: 'Senior Patrol Leader',
+  patrol: 'Bull',
+  iat: 1742567833,
+  exp: 1774103833
+}
+
+==== Generating token for GUARDIAN ====
+Found user: 偉澤 於 (smis-2025-guardian-dev@maildrop.cc)
+Guardian relationship: MOTHER
+
+GUARDIAN TOKEN:
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNtaXMtMjAyNS1ndWFyZGlhbi1kZXZAbWFpbGRyb3AuY2MiLCJzdWIiOiI1MjFiYzAzMS0wNGFhLTQ0YmQtYWZiNC1iMGRhMDg1M2IzZmQiLCJncm91cCI6IkdVQVJESUFOIiwicmVsYXRpb25zaGlwIjoiTU9USEVSIiwiaWF0IjoxNzQyNTY3ODMzLCJleHAiOjE3NzQxMDM4MzN9.5Ix_Fur6LqslwzemejJ73_KOrA8oCKDwrQIRIVjt8UY
+
+GUARDIAN PAYLOAD:
+{
+  email: 'smis-2025-guardian-dev@maildrop.cc',
+  sub: '521bc031-04aa-44bd-afb4-b0da0853b3fd',
+  group: 'GUARDIAN',
+  relationship: 'MOTHER',
+  iat: 1742567833,
+  exp: 1774103833
+}

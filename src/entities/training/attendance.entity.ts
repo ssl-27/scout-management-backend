@@ -1,7 +1,6 @@
 import { Column, Entity, JoinColumn, ManyToOne, OneToMany, TableInheritance } from 'typeorm';
 import { ScoutMember } from '../user-groups/scout/scout-member.entity';
 import { SMISBaseEntity } from '../base/base.entity';
-import { TrainingItem } from './training-item.entity';
 import { MeetingEntity } from './meeting.entity';
 
 @Entity()

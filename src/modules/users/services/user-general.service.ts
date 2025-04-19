@@ -111,4 +111,41 @@ export class UserGeneralService {
       .leftJoinAndSelect('scout.id', 'baseUser')
       .getMany();
   }
+
+  async findPatrolMembers(patrol: string){
+    return await this.scoutMemberRepository.createQueryBuilder('scoutMember')
+      .leftJoinAndSelect('scoutMember.id', 'scout')
+      .leftJoinAndSelect('scout.id', 'baseUser')
+      .where('scoutMember.patrol = :patrol', { patrol })
+      .getMany();
+  }
+
+  async findLeaders() {
+    return await this.leaderRepository.createQueryBuilder('leader')
+      .leftJoinAndSelect('leader.id', 'baseUser')
+      .getMany();
+  }
+
+  async findGuardianChildren(guardianId: string) {
+    // Find all member-guardian relationships for this guardian
+    const relationships = await this.memberGuardianRepository.find({
+      where: {
+        guardian: { id: guardianId }
+      },
+      relations: ['scout']
+    });
+
+    // Extract scout IDs from the relationships
+    const scoutIds = relationships.map(rel => rel.scout.id);
+
+    if (scoutIds.length === 0) {
+      return [];
+    }
+
+    // Fetch the full scout details with the base user information
+    return await this.scoutRepository.createQueryBuilder('scout')
+      .leftJoinAndSelect('scout.id', 'baseUser')
+      .where('scout.id IN (:...scoutIds)', { scoutIds })
+      .getMany();
+  }
 }

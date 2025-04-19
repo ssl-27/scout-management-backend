@@ -12,7 +12,6 @@ import {
 import { ScoutSectionEnum } from '../../common/enum/scout-section.enum';
 import { Guardian } from './guardian.entity';
 import { BaseUserEntity } from '../base/base-user.entity';
-import { TrainingRecordEntity } from '../training/training-record.entity';
 
 
 @Entity()

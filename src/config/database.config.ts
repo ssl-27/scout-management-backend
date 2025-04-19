@@ -27,6 +27,7 @@ export const databaseConfig = (
       return {
         ...config,
         logging: true,
+        logger: 'advanced-console', // Use TypeORM's built-in logger
       };
     case 'production':
       return {
