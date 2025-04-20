@@ -14,6 +14,7 @@ import { BadgeModule } from './modules/badge/badge.module';
 import { CommandsModule } from './commands/commands.module';
 import { ActivitiesModule } from './modules/activities/activities.module';
 import { NotificationsModule } from './modules/notifications/notification.module';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 @Module({
   imports: [
@@ -36,6 +37,7 @@ import { NotificationsModule } from './modules/notifications/notification.module
     CommandsModule,
     ActivitiesModule,
     NotificationsModule,
+    DashboardModule,
   ],
   controllers: [AppController],
   providers: [AppService],

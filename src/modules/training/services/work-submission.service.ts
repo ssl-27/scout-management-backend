@@ -63,7 +63,7 @@ export class WorkSubmissionService {
   async findAllByScout(scoutId: string): Promise<WorkSubmission[]> {
     return this.workSubmissionRepository.find({
       where: { scout: { id: scoutId } },
-      relations: ['requirement', 'reviewedBy']
+      relations: ['requirement', 'reviewedBy','reviewedBy.id']
     });
   }
 
@@ -84,7 +84,7 @@ export class WorkSubmissionService {
   async findOne(id: string): Promise<WorkSubmission> {
     const workSubmission = await this.workSubmissionRepository.findOne({
       where: { id },
-      relations: ['scout', 'requirement', 'reviewedBy']
+      relations: ['scout', 'requirement', 'reviewedBy','reviewedBy.id']
     });
 
     if (!workSubmission) {
