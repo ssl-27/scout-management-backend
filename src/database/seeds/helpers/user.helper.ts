@@ -14,11 +14,10 @@ export const generateBaseUser = (role: UserTypeEnum) => {
     firstName,
     lastName: faker.person.lastName(),
     preferredName: firstName,
-    email: faker.internet.email(),
     phone: faker.phone.number({style: 'national'}),
     chineseName: faker.person.lastName() + faker.person.firstName(),
     role,
     gender,
-    status: faker.helpers.arrayElement(['Active', 'Inactive', 'Pending'])
+    status: faker.helpers.arrayElement(['Active'])
   };
 };
