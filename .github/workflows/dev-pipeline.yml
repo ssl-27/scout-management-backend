@@ -78,7 +78,9 @@ jobs:
                 --build-arg EMAIL_USER=${{secrets.EMAIL_USER}} \
                 --build-arg EMAIL_APP_PASSWORD=${{secrets.EMAIL_APP_PASSWORD}} \
                 --build-arg EMAIL_FROM=${{secrets.EMAIL_FROM}} \
-                --build-arg JWT_SECRET=${{secrets.JWT_SECRET}} . --progress=plain --no-cache
+                --build-arg JWT_SECRET=${{secrets.JWT_SECRET}} \
+                --build-arg OPENAI_API_KEY=${{secrets.OPENAI_API_KEY}} \
+                --build-arg FIREBASE_SERVICE_ACCOUNT_KEY=${{secrets.FIREBASE_SERVICE_ACCOUNT_KEY}} . --progress=plain --no-cache
           docker push ${{ format('asia-east2-docker.pkg.dev/{0}/scout-management-be/api:dev-{1}', secrets.GCP_PROJECT_ID, github.sha) }}
 
       - name: Deploy to Cloud Run
