@@ -25,4 +25,4 @@ ENV NODE_ENV=development
 EXPOSE 8080
 
 # Start the application in production mode
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "start:dev"]
