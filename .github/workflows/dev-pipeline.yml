@@ -64,7 +64,7 @@ jobs:
       # Configure docker to use gcloud credentials
       - name: Configure Docker
         run: |
-          gcloud auth configure-docker asia-east2-docker.pkg.dev
+          gcloud auth configure-docker asia-east1-docker.pkg.dev
 
       # Build and Push Docker image
       - name: Build and Push
