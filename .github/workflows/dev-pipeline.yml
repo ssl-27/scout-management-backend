@@ -69,7 +69,7 @@ jobs:
       # Build and Push Docker image
       - name: Build and Push
         run: |
-          docker build -t ${{ format('asia-east2-docker.pkg.dev/{0}/scout-management-be/api:dev-{1}', secrets.GCP_PROJECT_ID, github.sha) }} \
+          docker build -t ${{ format('asia-east1-docker.pkg.dev/{0}/scout-management-be/api:dev-{1}', secrets.GCP_PROJECT_ID, github.sha) }} \
              --build-arg DB_HOST=${{secrets.DB_HOST}} \
                 --build-arg DB_PORT=${{secrets.DB_PORT}} \
                 --build-arg DB_USERNAME=${{secrets.DB_USERNAME}} \
@@ -81,7 +81,7 @@ jobs:
                 --build-arg JWT_SECRET=${{secrets.JWT_SECRET}} \
                 --build-arg OPENAI_API_KEY=${{secrets.OPENAI_API_KEY}} \
                 --build-arg FIREBASE_SERVICE_ACCOUNT_KEY=${{secrets.FIREBASE_SERVICE_ACCOUNT_KEY}} . --progress=plain --no-cache
-          docker push ${{ format('asia-east2-docker.pkg.dev/{0}/scout-management-be/api:dev-{1}', secrets.GCP_PROJECT_ID, github.sha) }}
+          docker push ${{ format('asia-east1-docker.pkg.dev/{0}/scout-management-be/api:dev-{1}', secrets.GCP_PROJECT_ID, github.sha) }}
 
       - name: Deploy to Cloud Run
         id: deploy
