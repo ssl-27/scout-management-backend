@@ -1,79 +1,28 @@
 # Build stage
 FROM node:18-alpine AS builder
-ARG DB_HOST
-ARG DB_PORT
-ARG DB_USERNAME
-ARG DB_PASSWORD
-ARG DB_DATABASE
-
-ENV DB_HOST=$DB_HOST
-ENV DB_PORT=$DB_PORT
-ENV DB_USERNAME=$DB_USERNAME
-ENV DB_PASSWORD=$DB_PASSWORD
-ENV DB_DATABASE=$DB_DATABASE
-
-ARG JWT_SECRET
-ENV JWT_SECRET=$JWT_SECRET
-
-ARG EMAIL_USER
-ARG EMAIL_APP_PASSWORD
-ARG EMAIL_FROM
-
-ENV EMAIL_USER=$EMAIL_USER
-ENV EMAIL_APP_PASSWORD=$EMAIL_APP_PASSWORD
-ENV EMAIL_FROM=$EMAIL_FROM
-
-
 WORKDIR /usr/src/app
 COPY package*.json ./
 COPY tsconfig.json ./
 RUN npm install
 COPY . .
 RUN npm run build
-RUN echo "=== After build ===" && ls -la && echo "=== Dist folder ===" && ls -la dist/
 
-
-
-# Development stage
+# Production stage
 FROM node:18-alpine
 WORKDIR /usr/src/app
+COPY --from=builder /usr/src/app/dist ./dist
+COPY --from=builder /usr/src/app/node_modules ./node_modules
 COPY package*.json ./
-COPY tsconfig.json ./
-RUN npm install
-COPY . .
-RUN npm run build
-EXPOSE 8080
+
+# Create uploads directory
+RUN mkdir -p uploads
+
+# Set environment variables
 ENV PORT=8080
+ENV NODE_ENV=development
 
-ARG DB_HOST
-ARG DB_PORT
-ARG DB_USERNAME
-ARG DB_PASSWORD
-ARG DB_DATABASE
+# Expose the port
+EXPOSE 8080
 
-ENV DB_HOST=$DB_HOST
-ENV DB_PORT=$DB_PORT
-ENV DB_USERNAME=$DB_USERNAME
-ENV DB_PASSWORD=$DB_PASSWORD
-ENV DB_DATABASE=$DB_DATABASE
-
-ARG JWT_SECRET
-ENV JWT_SECRET=$JWT_SECRET
-
-ARG EMAIL_USER
-ENV EMAIL_USER=$EMAIL_USER
-ARG EMAIL_APP_PASSWORD
-ENV EMAIL_APP_PASSWORD=$EMAIL_APP_PASSWORD
-ARG EMAIL_FROM
-ENV EMAIL_FROM=$EMAIL_FROM
-
-ARG OPENAI_API_KEY
-ENV OPENAI_API_KEY=$OPENAI_API_KEY
-
-ARG FIREBASE_SERVICE_ACCOUNT_KEY
-ENV FIREBASE_SERVICE_ACCOUNT_KEY=$FIREBASE_SERVICE_ACCOUNT_KEY
-
-RUN echo "=== Starting database seed ===" && \
-    NODE_ENV=development npm run seed || (echo "Seeding failed" && exit 1)
-
-CMD ["npm", "run", "start:dev"]
+# Start the application in production mode
+CMD ["npm", "run", "start"]
