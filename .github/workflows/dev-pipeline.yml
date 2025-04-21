@@ -44,6 +44,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Import badges
+        run: npm run import-badges
+
       # Add Google Cloud Authentication
       - name: Google Auth
         uses: 'google-github-actions/auth@v1'
