@@ -8,7 +8,7 @@ export class FileUploadService {
   constructor(private readonly configService: ConfigService) {}
 
   getFileUrl(filename: string): string {
-    const baseUrl = this.configService.get<string>('APP_URL') || 'http://localhost:3000';
+    const baseUrl = this.configService.get<string>('APP_URL') || 'https://scout-management-api-154434536011.asia-east1.run.app';
     return `${baseUrl}/uploads/${filename}`;
   }
 
