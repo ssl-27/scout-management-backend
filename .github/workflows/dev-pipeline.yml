@@ -53,6 +53,8 @@ jobs:
           DB_USERNAME: ${{ secrets.DB_USERNAME }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
           DB_DATABASE: ${{ secrets.DB_DATABASE }}
+          OPENAI_API_KEY: ${{secrets.OPENAI_API_KEY}}
+          FIREBASE_SERVICE_ACCOUNT_KEY: ${{secrets.FIREBASE_SERVICE_ACCOUNT_KEY}}
 
       # Add Google Cloud Authentication
       - name: Google Auth
