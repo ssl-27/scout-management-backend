@@ -75,7 +75,7 @@ ENV OPENAI_API_KEY=$OPENAI_API_KEY
 ARG FIREBASE_SERVICE_ACCOUNT_KEY
 ENV FIREBASE_SERVICE_ACCOUNT_KEY=$FIREBASE_SERVICE_ACCOUNT_KEY
 
-RUN echo "=== Starting database seed ===" && \
-    NODE_ENV=development npm run seed || (echo "Seeding failed" && exit 1)
+#RUN echo "=== Starting database seed ===" && \
+#    NODE_ENV=development npm run seed || (echo "Seeding failed" && exit 1)
 
 CMD ["npm", "run", "start:dev"]
