@@ -19,6 +19,6 @@ export const generateBaseUser = (role: UserTypeEnum) => {
     chineseName: faker.person.lastName() + faker.person.firstName(),
     role,
     gender,
-    status: faker.helpers.arrayElement(['Active', 'Inactive', 'Pending'])
+    status: faker.helpers.arrayElement(['Active'])
   };
 };

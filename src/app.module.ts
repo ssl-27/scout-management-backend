@@ -8,6 +8,13 @@ import { AuthModule } from './modules/auth/auth.module';
 import { UserGeneralModule } from './modules/users/modules/user-general.module';
 import { TrainingModule } from './modules/training/training.module';
 import { SeedModule } from './database/seeds/seed.module';
+import { FileUploadModule } from './modules/file-upload/file-upload.module';
+import { NoticesModule } from './modules/notices/notices.module';
+import { BadgeModule } from './modules/badge/badge.module';
+import { CommandsModule } from './commands/commands.module';
+import { ActivitiesModule } from './modules/activities/activities.module';
+import { NotificationsModule } from './modules/notifications/notification.module';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 @Module({
   imports: [
@@ -24,6 +31,13 @@ import { SeedModule } from './database/seeds/seed.module';
     UserGeneralModule,
     TrainingModule,
     SeedModule,
+    FileUploadModule,
+    NoticesModule,
+    BadgeModule,
+    CommandsModule,
+    ActivitiesModule,
+    NotificationsModule,
+    DashboardModule,
   ],
   controllers: [AppController],
   providers: [AppService],

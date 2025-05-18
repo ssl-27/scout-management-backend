@@ -17,7 +17,7 @@ export abstract class BaseUserEntity extends SMISBaseEntity {
 
   @Column()
   @IsEmail()
-  email: string;
+  email?: string;
 
   @Column()
   phone: string;

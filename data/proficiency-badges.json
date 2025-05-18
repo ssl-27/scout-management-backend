@@ -1,0 +1,699 @@
+{
+  "badges": [
+    {
+      "id": "badge_angler",
+      "title": "Angler",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_animal_care",
+      "title": "Animal Care",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_archery_interest",
+      "title": "Archery",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_artist",
+      "title": "Artist",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_athlete",
+      "title": "Athlete",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_camp_cook",
+      "title": "Camp Cook",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_canoeist_interest",
+      "title": "Canoeist",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_collector",
+      "title": "Collector",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_computer_interest",
+      "title": "Computer",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_cyclist",
+      "title": "Cyclist",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_dragon_boatman",
+      "title": "Dragon Boatman",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_footdrill_interest",
+      "title": "Footdrill",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_geologist",
+      "title": "Geologist",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_horseman",
+      "title": "Horseman",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_kite_flyer",
+      "title": "Kite Flyer",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_librarian",
+      "title": "Librarian",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_meteorologist_interest",
+      "title": "Meteorologist",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_modelmaker",
+      "title": "Model Maker",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_musician",
+      "title": "Musician",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_naturalist",
+      "title": "Naturalist",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_park_orienteer",
+      "title": "Park Orienteer",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_photographer",
+      "title": "Photographer",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_rowing_boatman",
+      "title": "Rowing Boatman",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_sailor_interest",
+      "title": "Sailor",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_smallholder",
+      "title": "Smallholder",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_swimmer",
+      "title": "Swimmer",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_tourism",
+      "title": "Tourism",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+    {
+      "id": "badge_windsurfer",
+      "title": "Windsurfer",
+      "type": "PROFICIENCY",
+      "group": "INTEREST"
+    },
+
+    {
+      "id": "badge_archery_pursuit",
+      "title": "Archery",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_astronomer",
+      "title": "Astronomer",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_aviation_navigator",
+      "title": "Aviation Navigator",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_backwoods_cooking",
+      "title": "Backwoods Cook",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_camper",
+      "title": "Camper",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_canoeist_pursuit",
+      "title": "Canoeist",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_canoe_polo",
+      "title": "Canoe Polo",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_communicator",
+      "title": "Communicator",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_computer_pursuit",
+      "title": "Computer",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_cook_chinese_dishes",
+      "title": "Cook (Chinese Dishes)",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_craftsman",
+      "title": "Craftsman",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_electronics",
+      "title": "Electronics",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_explorer",
+      "title": "Explorer",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_flight_simulator",
+      "title": "Flight Simulator",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_footdrill_pursuit",
+      "title": "Footdrill",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_international_canoe_sprint",
+      "title": "International Canoe Sprint",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_map_maker",
+      "title": "Map Maker",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_map_reader",
+      "title": "Map Reader",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_marksman",
+      "title": "Marksman",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_master_at_arms",
+      "title": "Master-at-arms",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_mechanic",
+      "title": "Mechanic",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_meteorologist_pursuit",
+      "title": "Meteorologist",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_multimedia_designer",
+      "title": "Multimedia Designer",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_navigator",
+      "title": "Navigator",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_observer",
+      "title": "Observer",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_orienteer",
+      "title": "Orienteer",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_pioneer",
+      "title": "Pioneer",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_programmer",
+      "title": "Programmer",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_race_helmsman",
+      "title": "Race Helmsman",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_sailor_pursuit",
+      "title": "Sailor",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_skin_diver",
+      "title": "Skin Diver",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_skipper",
+      "title": "Skipper",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_sportsman",
+      "title": "Sportsman",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_tree_carer",
+      "title": "Tree Carer",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+    {
+      "id": "badge_world_friendship",
+      "title": "World Friendship",
+      "type": "PROFICIENCY",
+      "group": "PURSUIT"
+    },
+
+    {
+      "id": "badge_camp_warden",
+      "title": "Camp Warden",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_canoe_rescuer",
+      "title": "Canoe Rescuer",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_civics",
+      "title": "Civics",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_conservator",
+      "title": "Conservator",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_disability_awareness",
+      "title": "Disability Awareness",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_fireman",
+      "title": "Fireman",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_first_aid",
+      "title": "First Aider",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_guide",
+      "title": "Guide",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_interpreter",
+      "title": "Interpreter",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_jobman",
+      "title": "Jobman",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_lifesaver",
+      "title": "Lifesaver",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_mental_health_ambassador",
+      "title": "Mental Health Ambassador",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_nutritionist",
+      "title": "Nutritionist",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_pilot",
+      "title": "Pilot",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_public_health_ambassador",
+      "title": "Public Health Ambassador",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_quartermaster",
+      "title": "Quartermaster",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+    {
+      "id": "badge_secretary",
+      "title": "Secretary",
+      "type": "PROFICIENCY",
+      "group": "SERVICE"
+    },
+
+    {
+      "id": "badge_oarsman",
+      "title": "Oarsman",
+      "type": "SEA_ACTIVITY",
+      "group": "SEA_ACTIVITY"
+    },
+    {
+      "id": "badge_boatman",
+      "title": "Boatman",
+      "type": "SEA_ACTIVITY",
+      "group": "SEA_ACTIVITY"
+    },
+    {
+      "id": "badge_boatswain",
+      "title": "Boatswain",
+      "type": "SEA_ACTIVITY",
+      "group": "SEA_ACTIVITY"
+    },
+
+    {
+      "id": "badge_basic_air_activity",
+      "title": "Basic Air Activity",
+      "type": "AIR_ACTIVITY",
+      "group": "AIR_ACTIVITY"
+    },
+    {
+      "id": "badge_intermediate_air_activity",
+      "title": "Intermediate Air Activity",
+      "type": "AIR_ACTIVITY",
+      "group": "AIR_ACTIVITY"
+    },
+    {
+      "id": "badge_advanced_air_activity",
+      "title": "Advanced Air Activity",
+      "type": "AIR_ACTIVITY",
+      "group": "AIR_ACTIVITY"
+    },
+
+    {
+      "id": "badge_service_flash",
+      "title": "Service Flash",
+      "type": "OTHER",
+      "group": "OTHER_AWARDS"
+    },
+    {
+      "id": "badge_leadership_award",
+      "title": "Leadership Award",
+      "type": "OTHER",
+      "group": "OTHER_AWARDS"
+    },
+    {
+      "id": "badge_patrol_activity_woggle",
+      "title": "Patrol Activity Woggle",
+      "type": "OTHER",
+      "group": "OTHER_AWARDS"
+    },
+    {
+      "id": "badge_community_involvement",
+      "title": "Community Involvement Badge",
+      "type": "OTHER",
+      "group": "OTHER_AWARDS"
+    },
+    {
+      "id": "badge_religious",
+      "title": "Religious Badge",
+      "type": "OTHER",
+      "group": "OTHER_AWARDS"
+    },
+    {
+      "id": "badge_world_conservation",
+      "title": "World Conservation Badge",
+      "type": "OTHER",
+      "group": "OTHER_AWARDS"
+    },
+    {
+      "id": "badge_world_scout_environment",
+      "title": "World Scout Environment Badge",
+      "type": "OTHER",
+      "group": "OTHER_AWARDS"
+    },
+    {
+      "id": "badge_venture_scout_link",
+      "title": "Venture Scout Link Badge",
+      "type": "OTHER",
+      "group": "OTHER_AWARDS"
+    },
+    {
+      "id": "badge_membership_badge",
+      "title": "Membership Badge",
+      "type": "PROGRESSIVE",
+      "group": "PROGRESSIVE"
+    },
+    {
+      "id": "badge_cyclist_instructor",
+      "title": "Cyclist (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_photographer_instructor",
+      "title": "Photographer (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_sailor_instructor",
+      "title": "Sailor (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_swimmer_instructor",
+      "title": "Swimmer (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_astronomer_instructor",
+      "title": "Astronomer (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_backwoods_cook_instructor",
+      "title": "Backwoods Cook (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_camper_instructor",
+      "title": "Camper (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_communicator_instructor",
+      "title": "Communicator (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_cook_(chinese_dishes)_instructor",
+      "title": "Cook (Chinese Dishes) (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_flight_simulator_instructor",
+      "title": "Flight Simulator (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_map_maker_instructor",
+      "title": "Map Maker (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_mechanic_instructor",
+      "title": "Mechanic (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_meteorologist_instructor",
+      "title": "Meteorologist (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_multimedia_designer_instructor",
+      "title": "Multimedia Designer (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_observer_instructor",
+      "title": "Observer (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_orienteer_instructor",
+      "title": "Orienteer (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_pioneer_instructor",
+      "title": "Pioneer (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_tree_carer_instructor",
+      "title": "Tree Carer (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_conservator_instructor",
+      "title": "Conservator (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    },
+    {
+      "id": "badge_lifesaver_instructor",
+      "title": "Lifesaver (Instructor)",
+      "type": "PROFICIENCY",
+      "group": "INSTRUCTOR"
+    }
+  ]
+}

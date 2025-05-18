@@ -1,4 +1,3 @@
-// src/dto/create-meeting.dto.ts
 import { IsBoolean, IsDateString, IsNotEmpty, IsString, IsArray, IsUUID } from 'class-validator';
 
 export class CreateMeetingDto {
@@ -27,5 +26,9 @@ export class CreateMeetingDto {
 
   @IsArray()
   @IsUUID('4', { each: true })
-  trainingItemIds: string[];
+  requirementIds: string[];
+
+  @IsArray()
+  @IsUUID('4', { each: true })
+  proficiencyBadgeIds: string[];
 }

@@ -1,0 +1,2103 @@
+{
+  "badges": [
+    {
+      "id": "badge_pathfinder",
+      "title": "Scout Pathfinder Award",
+      "type": "PROGRESSIVE",
+      "section": "SCOUT",
+      "requirements": [
+        {
+          "id": "pathfinder_a_1",
+          "text": "Camp craft",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "pathfinder_a_1_a",
+              "text": "Participate in an overnight Scout camp.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_a_1_b",
+              "text": "Pack up a rucksack for a weekend camp.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_a_1_c",
+              "text": "Use potentially dangerous gears properly, e.g. gas lantern and gas stove, and understand the relevant safety procedures.",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_a_1_d",
+              "text": "Maintain camping gear.",
+              "order": 4,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_a_1_e",
+              "text": "Clean, organize and store personal and patrol camping gear.",
+              "order": 5,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "pathfinder_a_2",
+          "text": "Adventure",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "pathfinder_a_2_a",
+              "text": "With proper gear and accompanied by a friend, complete a day journey of at least 8 km on foot, or 12 km by bicycle or by boat.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_a_2_b",
+              "text": "Know maps and legends.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_a_2_c",
+              "text": "Explain the different types of maps and their uses, and identify 10 different\tlegend\tsymbols\tshown\ton\tthe\tmap.",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_a_2_d",
+              "text": "Pack a rucksack for a 1-day journey to the countryside.",
+              "order": 4,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_a_2_e",
+              "text": "Identify the items for personal use and the quantities needed and pack the rucksack based on the principles of packing.",
+              "order": 5,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "pathfinder_a_3",
+          "text": "Pioneering",
+          "order": 3,
+          "type": "MANDATORY",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "pathfinder_a_3_a",
+              "text": "Demonstrate the use of knots and hitches commonly used in Scout activities,\t including\t reef\tknot,figure\t of-eight\tknot,\tclove\thitch,\thalf\thitch, overhand knot, bowline, sheet bend, round turn and two half hitches, timber hitch.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_a_3_b",
+              "text": "Learn how to maintain ropes.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_a_3_c",
+              "text": "Demonstrate how to coil a rope, and understand the importance of proper rope storage. Scout Pathfinder Award For Scouts who are 11 or above and have attained the Membership Badge. Sea Scouts must choose ‘Sea Acitivites’ and Air Scouts must choose ‘Air Activities’ from the electives. Complete the following:18 | PROGRESSIVE BADGES SCOUT PATHFINDER AWARDPROGRESSIVE BADGES4. Outdoor activities (Elective)",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "pathfinder_a_4",
+            "text": "Outdoor activities (Elective)",
+            "order": 4,
+            "type": "ELECTIVE",
+            "section": "Outdoor Challenge",
+            "sub_requirements": [
+              {
+                "id": "pathfinder_a_4_a",
+                "text": "Know the safety guidelines for outdoor activities and the Country Code.",
+                "order": 1,
+                "type": "MANDATORY",
+                "options": null
+              },
+              {
+                "id": "pathfinder_a_4_b",
+                "text": "Complete one of the following activities:",
+                "order": 2,
+                "type": "OPTIONAL",
+                "options": [
+                  {
+                    "id": "pathfinder_a_4_b_opt_i",
+                    "text": "Take part in a tracking activity",
+                    "order": 1,
+                    "type": "OPTION"
+                  },
+                  {
+                    "id": "pathfinder_a_4_b_opt_ii",
+                    "text": "Take part in a park orienteering activity",
+                    "order": 2,
+                    "type": "OPTION"
+                  },
+                  {
+                    "id": "pathfinder_a_4_b_opt_iii",
+                    "text": "Take part in an activity using codes",
+                    "order": 3,
+                    "type": "OPTION"
+                  }
+                ]
+              }
+            ]
+        },
+        {
+          "id": "pathfinder_a_5",
+          "text": "Sea activities (Elective)",
+          "order": 5,
+          "type": "ELECTIVE",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "pathfinder_a_5_a",
+              "text": "Understand the safey guidelines for sea activities.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_a_5_b",
+              "text": "Pass the Scout Association open water swimming test.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "pathfinder_a_6",
+          "text": "Air activities (elective) (Elective)",
+          "order": 6,
+          "type": "ELECTIVE",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "pathfinder_a_6_a",
+              "text": "State the general safety rules for passengers in airports and aircraft respectively.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_a_6_b",
+              "text": "Complete one item : military\taircrafts) crafts\tin\tthe\tAirman\tbadge Note: Members only need to choose one activity out of outdoor activities / Sea activity / Air activity, as their main assessment task, but the same elective choice must be followed for all subsequent progressive awards. Nonetheless, Sea Scout must choose \"Sea activities\" whereas Air Scout must choose \"Air activities\" .A good many young men find at twenty-two that they know practically all that there is to know and they want other people to know that they know it. When they get to thirty - two they find that they have still got one or two things to learn; at forty-two they are learning hard. (I am still doing so at seventy-three). 許多年輕人在二十幾歲就相信，他們已經知道了所有應知道的事，而且希望其他的人都知道這 件事。三十幾歲時，卻發現還有一、兩件事等著他去學。到了四十幾歲，他們才知道，還有太 多的事需要學習。 PROGRESSIVE BADGES | 19 SCOUT PATHFINDER AWARDPROGRESSIVE BADGESB.",
+              "order": 2,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "pathfinder_a_6_b_opt_i",
+                  "text": "Take part in an outdoor air activity",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "pathfinder_a_6_b_opt_ii",
+                  "text": "Name the parts of a modern aircraft (including fixed wing, helicopter,",
+                  "order": 2,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "pathfinder_a_6_b_opt_iii",
+                  "text": "Know how to identify an aircraft and be able to identify 4 types of",
+                  "order": 3,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pathfinder_b_1",
+          "text": "Physical Fitness",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "pathfinder_b_1_a",
+              "text": "Take\tpart\tin\ta\tpatrol\tactivity\tinvolving\tsports\tor\tphysical\tfitness.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "pathfinder_b_2",
+          "text": "Art, Creativity and Technology",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "pathfinder_b_2_a",
+              "text": "Know the patrol yell and use it in an activity to enhance team spirit.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "pathfinder_b_3",
+          "text": "Leadership",
+          "order": 3,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "pathfinder_b_3_a",
+              "text": "Participate in one Patrol meeting and state the purpose in organizing Patrol meeting.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "pathfinder_b_4",
+          "text": "Spiritual Development",
+          "order": 4,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "pathfinder_b_4_a",
+              "text": "Share personal experience in daily life on the subject of the Scout Law and Promise.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_b_4_b",
+              "text": "Take part in a Scouts’ own.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "pathfinder_c_1",
+          "text": "Service",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Society",
+          "sub_requirements": [
+            {
+              "id": "pathfinder_c_1_a",
+              "text": "Know and demonstrate how to handle accidents, e.g. nose bleed, burns, cuts and thorns, etc.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_c_1_b",
+              "text": "Participate in a community service of at least 4 hours.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_c_1_c",
+              "text": "Complete service of at least 4 hours approved by the Scout Leader, District, Region or Association headquarters.",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "pathfinder_c_1_d",
+              "text": "Record the details of the service, such as the organization, targets, time and location; and share the personal experience and feeling with other patrol members.",
+              "order": 4,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "pathfinder_c_2",
+          "text": "Community",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Society",
+          "sub_requirements": [
+            {
+              "id": "pathfinder_c_2_a",
+              "text": "Using city-tracking, pictures, photos, sketches, atlas, online maps or other means, introduce to patrol members the community facilities near your home\tor\ttroop\tbase,\te.g.\tpolice\tstation,\thospital,\tfire\tstation,\tdistrict\toffice and public transport etc.In the management of our Movement, there are two points only. One is that we are a very elastic institution. If a Scout Leader does not like the aims of the Movement, he is perfectly at liberty to go and play somewhere else. The other point is that there is a spirit of brotherhood amongst us, and the spirit of playing the game, and each playing in his own place. I cannot commend that spirit too highly, because it is the essential of success in a Movement like ours. 童軍運動有兩個特性：第一，它是一種很有彈性的組織，如果你不喜歡童軍運動的訓練及目 標，你大可自由離去。第二點是「四海之內皆兄弟」的精神，這種精神才是最重要的，因它才 是童軍運動成功的關鍵所在。 PROGRESSIVE BADGES | 21 SCOUT PATHFINDER AWARDPROGRESSIVE BADGESD.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "pathfinder_d_1",
+          "text": "Nature",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Environment",
+          "sub_requirements": [
+            {
+              "id": "pathfinder_d_1_a",
+              "text": "Visit an exhibition or a place on the subject of nature environment or habitat. Together with patrol members, visit a relevant exhibition or place, e.g. Mai Po Nature Conservation Area, Sai Kung Coastal Park, Wetland Park, an organic farm or nature trail etc.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "pathfinder_d_2",
+          "text": "Meteorology",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Environment",
+          "sub_requirements": [
+            {
+              "id": "pathfinder_d_2_a",
+              "text": "Understand\t the\tdifference\t between\t weather\t and\tclimate\tand\tlist\ttheir effects\ton\toutdoor\tactivities ．State\tthe\tdifference\tbetween\tweather\tand\tclimate\tand\tbriefly\tintroduce the\tclimate\tof\tHK,\tstate\tthe\teffects\tof\tvarious\telements\t of\tweather,\te.g. temperature, pressure, wind speed, humidity, rainfall, on outdoor scouting activities.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        }
+      ],
+      "prerequisites": ["membership_badge"]
+    },
+    {
+      "id": "badge_standard",
+      "title": "Scout Standard Award",
+      "type": "PROGRESSIVE",
+      "section": "SCOUT",
+      "requirements": [
+        {
+          "id": "standard_a_1",
+          "text": "Camp craft",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "standard_a_1_a",
+              "text": "Participate in a scout camp and share the experience with others using articles, speeches, videos/photos or other means.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_a_1_b",
+              "text": "Pitch, pack and store a tent ． Know the different types of tents; ． Demonstrate pitching, packing and storing them.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_a_1_c",
+              "text": "Complete at least 4 camping gadgets as a member in a patrol, such as setting the boundary, a camp gate, a hanging rack, rubbish processing facility etc.",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_a_1_d",
+              "text": "Demonstrate how to start a fire using natural material / wood ． Understand the elements of a fire, identify natural materials which can be used as fuel; ． Demonstrate setting up the wood and material and start a fire; ． Use the fire to boil water.",
+              "order": 4,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_a_1_e",
+              "text": "Know and experience outdoor cooking ． Cook a simple dish, make a hot drink and clean up afterwards.",
+              "order": 5,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "standard_a_2",
+          "text": "Adventure",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "standard_a_2_a",
+              "text": "Complete a journey of at least 12 km on foot or 18 km by bicycle or boat. Share the experience using articles, speeches, videos/photos or other means.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_a_2_b",
+              "text": "Understand scale and distance ． Point out 2 types of scales used on maps; ． Identify the relationship between scale and distance; ． Demonstrate how to convert between actual distance and distance on a map.PROGRESSIVE BADGES | 23 SCOUT STANDARD AWARDPROGRESSIVE BADGESc. Demonstrate how to position a map and its purpose; and use topography, landscape, landmarks and compass to position a map correctly in countryside.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_a_2_d",
+              "text": "Use a compass and map to identify your location ． Understand the grid north, magnetic north, true north and the coordinate system; ． Demonstrate using a map and compass to identify your location; ． Demonstrate how to locate yourself using 4-digit and 6-digit coordinates.",
+              "order": 4,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "standard_a_3",
+          "text": "Pioneering",
+          "order": 3,
+          "type": "MANDATORY",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "standard_a_3_a",
+              "text": "Demonstrate how to tie the square lashing, diagonal lashing, figure of eight lashing, shear lashing and shear leg; and state their uses.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_a_3_b",
+              "text": "Follow the safety guidelines for pioneering ． Learn and follow the safety guidelines during a pioneering activity.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_a_3_c",
+              "text": "Conduct a pioneering activity using knots, hitches and lashings, e.g. scout staff ballista, bouncing bazooka, guided missile launcher or patrol swing bridge etc.24 | PROGRESSIVE BADGES SCOUT STANDARD AWARDPROGRESSIVE BADGES4. Outdoor activities (Elective)",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+            "id": "standard_a_4",
+            "text": "Outdoor activities (Elective)",
+            "order": 4,
+            "type": "ELECTIVE",
+            "section": "Outdoor Challenge",
+            "sub_requirements": [
+              {
+                "id": "standard_a_4_a",
+                "text": "Complete the 'Outdoor activities' under the Pathfinder Award.",
+                "order": 1,
+                "type": "MANDATORY",
+                "options": null
+              },
+              {
+                "id": "standard_a_4_b",
+                "text": "Attain a proficiency badge related to outdoor activities, such as Park Orienteering (Interest), Naturalist (Interest), Geologist (Interest), Footdrill (Interest) etc.",
+                "order": 2,
+                "type": "MANDATORY",
+                "options": null,
+                "badges_used": [
+                  "badge_park_orienteering",
+                  "badge_naturalist",
+                  "badge_geologist",
+                  "badge_footdrill"
+                ]
+              },
+              {
+                "id": "standard_a_4_c",
+                "text": "Complete one of the following, which was not used in attaining previous progress badge: or similar means of communication",
+                "order": 3,
+                "type": "OPTIONAL",
+                "options": [
+                  {
+                    "id": "standard_a_3_c_opt_i",
+                    "text": "City-tracking",
+                    "order": 1,
+                    "type": "OPTION"
+                  },
+                  {
+                    "id": "standard_a_3_c_opt_ii",
+                    "text": "A communication activity involving the use of codes, semaphores",
+                    "order": 2,
+                    "type": "OPTION"
+                  }
+                ]
+              }
+                ]
+                },
+
+        {
+          "id": "standard_a_5",
+          "text": "Sea activities (Elective)",
+          "order": 5,
+          "type": "ELECTIVE",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "standard_a_5_a",
+              "text": "Complete the Sea activities under the Pathfinder Award.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_a_5_b",
+              "text": "Attain the Boatman badge.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null,
+                "badges_used": [
+                    "badge_boatman"
+                ]
+            },
+            {
+              "id": "standard_a_5_c",
+              "text": "Take part in a Sea activity other than the Standard Boat at a Scout Sea Activity Centre.",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "standard_a_6",
+          "text": "Air activities (Elective)",
+          "order": 6,
+          "type": "ELECTIVE",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "standard_a_6_a",
+              "text": "Complete the Air activities under the Pathfinder Award.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_a_6_b",
+              "text": "Attain the Basic Air Activity Badge.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null,
+                "badges_used": [
+                    "badge_basic_air_activity"
+                ]
+            },
+            {
+              "id": "standard_a_6_c",
+              "text": "Complete one item: Note: Members only need to choose one activity out of outdoor activities / Sea activity / Air activity, as their main assessment task, but the same elective choice must be followed for all  subsequent progressive awards. Nonetheless, Sea Scout must choose \"Sea activities\" whereas Air Scout must choose \"Air activities\" .The whole object of our Scouting is to seize the boy’s character in its red-hot stage of enthu - siasm, and to weld it into the right shape and to encourage and develop its individuality—so that the boy may educate himself to become a good man and a valuable citizen for his country. 童軍活動的整個目標，是利用兒童們可塑性最高的時期，指出正確的方向，鼓舞熱忱，發展個 性，以期孩子們將來能自我教育，成為國家有用的棟樑。 PROGRESSIVE BADGES | 25 SCOUT STANDARD AWARDPROGRESSIVE BADGESB.",
+              "order": 3,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "standard_a_6_c_opt_i",
+                  "text": "Understand how wind affects flying activities",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "standard_a_6_c_opt_ii",
+                  "text": "Understand the aviation law related to flight safety",
+                  "order": 2,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "standard_b_1",
+          "text": "Physical Fitness",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "standard_b_1_a",
+              "text": "Complete one item: (Interest), Cyclist (Interest), Archery (Interest), Swimmer (Interest) or Canoeist (Interest) etc; ． Understand the importance of a balanced diet; ． Design a menu for a meal following the recommendations of a food pyramid; ． Cook the meal with your patrol member.",
+              "order": 1,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "standard_b_1_a_opt_i",
+                  "text": "Attain a proficiency badge related to physical fitness",
+                  "order": 1,
+                  "type": "OPTION",
+                    "badges_used": [
+                        "badge_sportsman",
+                        "badge_cyclist",
+                        "badge_archery",
+                        "badge_swimmer",
+                        "badge_canoeist"
+                    ]
+                },
+                {
+                  "id": "standard_b_1_a_opt_ii",
+                  "text": "Plan and prepare a meal",
+                  "order": 2,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "standard_b_2",
+          "text": "Art, Creativity and Technology",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "standard_b_2_a",
+              "text": "Take part in a campfire or lantern night.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_b_2_b",
+              "text": "Complete one item: not used in attaining previous progressive badge e.g. Artist (Interest), Modelmaker (Interest), Music (Interest), Craftsman (Pursuit) etc. ． State its use and how it works.",
+              "order": 2,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "standard_b_2_b_opt_i",
+                  "text": "Attain a proficiency badge related to art and creativity, which was",
+                  "order": 1,
+                  "type": "OPTION",
+                    "badges_used": [
+                        "badge_artist",
+                        "badge_modelmaker",
+                        "badge_music",
+                        "badge_craftsman"
+                    ]
+                },
+                {
+                  "id": "standard_b_2_b_opt_ii",
+                  "text": "Attend an arts performance.",
+                  "order": 2,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "standard_b_2_b_opt_iii",
+                  "text": "Visit an art exhibition.",
+                  "order": 3,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "standard_b_2_b_opt_iv",
+                  "text": "Sing your patrol song.",
+                  "order": 4,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "standard_b_2_b_opt_v",
+                  "text": "Visit a science exhibition.",
+                  "order": 5,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "standard_b_2_b_opt_vi",
+                  "text": "Make a electronic tool",
+                  "order": 6,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "standard_b_3",
+          "text": "Leadership",
+          "order": 3,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "standard_b_3_a",
+              "text": "Participate in one Patrol activity (indoor or outdoor).",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "standard_b_4",
+          "text": "Spiritual Development",
+          "order": 4,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "standard_b_4_a",
+              "text": "Take part in a Scouts’ own.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_b_4_b",
+              "text": "Complete one item: background and traditions etc. views and world harmony etc.26 | PROGRESSIVE BADGES SCOUT STANDARD AWARDPROGRESSIVE BADGESC.",
+              "order": 2,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "standard_b_4_b_opt_i",
+                  "text": "Introduce a religion to your patrol, including its historical",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "standard_b_4_b_opt_ii",
+                  "text": "Introduce a belief to your patrol, such as views on life, values, world",
+                  "order": 2,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "standard_c_1",
+          "text": "Service",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Society",
+          "sub_requirements": [
+            {
+              "id": "standard_c_1_a",
+              "text": "Demonstrate how to conduct a basic diagnosis of an injury and how to make a call for emergency services during an accident.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_c_1_b",
+              "text": "Pack a personal first-aid kit suitable for a 1-day outdoor activity",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_c_1_c",
+              "text": "Know how to use the items in the kit.",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_c_1_d",
+              "text": "Know and participate in community activities ． State the importance of participating in community activities; ． Identify the needs of the communities where your live in or where your troop is based in; ． The 8type of community events that can be planned",
+              "order": 4,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "standard_c_1_e",
+              "text": "Complete service of at least 8 hours approved by the Scout Leader, District, Region or Association headquarters. Record the details of the service, such as the organization, targets, time and location in the service.",
+              "order": 5,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "standard_c_2",
+          "text": "Community and local awareness",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Society",
+          "sub_requirements": [
+            {
+              "id": "standard_c_2_a",
+              "text": "Participate in or be an audience in local cultural practices or traditional festivals, e.g. dragon dance, lion dance, Piu-sik Parade, dragon boat racing, fire dragon dance, Chinese operas for Deities, blessing, and the Cantonese Operas etc.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "standard_c_3",
+          "text": "Knowing the world",
+          "order": 3,
+          "type": "MANDATORY",
+          "section": "Society",
+          "sub_requirements": [
+            {
+              "id": "standard_c_3_a",
+              "text": "Introduce a foreign activity or culture ． Learn a foreign activity or culture, e.g. songs, games, activity, language etc; and share it with your patrol members.As Scouts, it is our business to find out the other fellow’s point of view before we actually press our own. We want a great, broad-minded outlook in every direction 身為童軍，在傳達自己思想之前，應先了解其他伙伴的意見。我們希望童軍在各方面都有開闊 的胸襟。 PROGRESSIVE BADGES | 27 SCOUT STANDARD AWARDPROGRESSIVE BADGESD.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "standard_d_1",
+          "text": "Ecological environment",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Environment",
+          "sub_requirements": [
+            {
+              "id": "standard_d_1_a",
+              "text": "Introduce the food chain, biological networks and ecological cycle using drawing, electronic media or other means.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "standard_d_2",
+          "text": "Meteorology",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Environment",
+          "sub_requirements": [
+            {
+              "id": "standard_d_2_a",
+              "text": "Complete one item out of the following: using drawings, model making or other means and explain the principles behind; by using drawings, videos/photos, electronic media or other means. Explain the water cycle.",
+              "order": 1,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "standard_d_2_a_opt_i",
+                  "text": "Introduce the measurement of wind speed and wind directions",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "standard_d_2_a_opt_ii",
+                  "text": "Introduce the formation of clouds and 10 basic types of clouds",
+                  "order": 2,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "standard_d_3",
+          "text": "Crisis and protection",
+          "order": 3,
+          "type": "MANDATORY",
+          "section": "Environment",
+          "sub_requirements": [
+            {
+              "id": "standard_d_3_a",
+              "text": "Complete one item out of the following: how natural disaster are predicted and the respective recovery action. how it can be applied in scout activities.",
+              "order": 1,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "standard_d_3_a_opt_i",
+                  "text": "Understand the effects of natural disasters on the environment,",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "standard_d_3_a_opt_ii",
+                  "text": "Understand the principles and concept of “Leave No Trace” and",
+                  "order": 2,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "standard_e_1",
+          "text": "Participate in an exchange activity held with another scout group or organization.",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "New Experience",
+          "sub_requirements": []
+        }
+      ],
+      "prerequisites": [
+        "badge_pathfinder"
+      ]
+    },
+    {
+      "id": "badge_advanced",
+      "title": "Scout Advanced Award",
+      "type": "PROGRESSIVE",
+      "section": "SCOUT",
+      "requirements": [
+        {
+          "id": "advanced_a_1",
+          "text": "Camp craft",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "advanced_a_1_a",
+              "text": "Be involved in planning and participate in a camping activity, and be responsible for one of these jobs – ． Arrange meals in the camping, including designing menus,  purchasing food and cooking; ． Manage camp hygiene, including arrangement and implementation of work; ． Be a camp quartermaster, including preparation, borrowing and returning of materials.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "advanced_a_1_b",
+              "text": "Complete at least 6 camp gadgets as a patrol member. e.g. table, worktop,\tstorage\track,\tshelter,\tnotice\tboard,\twater\tfilter,\tfood\tstorage\tetc.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "advanced_a_1_c",
+              "text": "Take part in a backwoods cooking activity. ．Set\tup\ta\tfire\tusing\tmatch\tand\tnatural\tmaterials; ．Cook\tfood\te.g.\tchicken,\tfish,\tegg\tin\tpotato\tand\tonion,\tbread,\tetc.",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "advanced_a_2",
+          "text": "Adventure",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "advanced_a_2_a",
+              "text": "Complete one item out of the following: ． As a patrol, plan and complete an expedition of at least 20 km on foot or 30 km by cycling or by boat; ． The plan should at least contain the route  (and the backup and emergency routes), estimated distance and time, weather forecast, personal and patrol equipment etc; ． Record the expedition, covering at least the route (and the backup and the emergency routes), estimated distance and times, record of the journey and personal and patrol equipment.The aim of the leaders is to help not merely the promising boys, but also, and more especially, the duller boy. 領導者的目的不只在於領導資賦優異的孩子，更重要的是幫助那些魯鈍的孩子。 30 | PROGRESSIVE BADGES SCOUT ADVANCED AWARDPROGRESSIVE BADGESII. Be involved in planning, participate in and record a night hike from evening to dawn. ． The plan should at least contain the route (and the backup and emergency routes), estimated distance and time, weather forecast, personal and patrol equipment etc; ． Record the expedition, covering at least the route (and the backup and the emergency routes), estimated distance and times, record of the journey and personal and patrol equipment.",
+              "order": 1,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "advanced_a_2_a_opt_i",
+                  "text": "A two-day-and-one-night expedition.",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "advanced_a_2_a_opt_ii",
+                  "text": "A night hike from evening to dawn.",
+                  "order": 2,
+                  "type": "OPTION"
+                }
+              ]
+            },
+            {
+              "id": "advanced_a_2_b",
+              "text": "Understand the relationship on ship between contour-lines and landform; identify various landform features from the contour-lines e.g.\tspur,\tvalley,\tridge,\tcliff,\tetc.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "advanced_a_2_c",
+              "text": "Demonstrate techniques of telling directions without using a compass ． Understand and demonstrate the survival skills of telling directions using the sun, stars and tree growth when lost in the wilderness.",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "advanced_a_3",
+          "text": "Pioneering",
+          "order": 3,
+          "type": "MANDATORY",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "advanced_a_3_a",
+              "text": "Demonstrate\t how\tto\ttie\tthe\tdouble\tsheetbend,\t fisherman’s\t knot,\trolling hitch,\tmousing,\tscaffold\tsling,\tcommon\twhipping\tand\tstate\ttheir\tuses.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "advanced_a_3_b",
+              "text": "Select, use and maintain tools suitable for your pioneering project, e.g. ropes, poles, blocks, mallets and stakes etc.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "advanced_a_3_c",
+              "text": "Use\tat\tleast\t2\tdifferent\t types\tof\tlashing\tto\tbuild\ttwo\tpioneering\t projects: such as Skylon Weathercock, Skylite, 10-minute tower etc.PROGRESSIVE BADGES | 31 SCOUT ADVANCED AWARDPROGRESSIVE BADGES4. Outdoor activities (Elective)",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "advanced_a_4",
+            "text": "Outdoor activities (Elective)",
+            "order": 4,
+            "type": "ELECTIVE",
+            "section": "Outdoor Challenge",
+            "sub_requirements": [
+              {
+                "id": "advanced_a_4_a",
+                "text": "Complete the outdoor activities under the Scout Standard Award.",
+                "order": 1,
+                "type": "MANDATORY",
+                "options": null
+              },
+              {
+                "id": "advanced_a_4_b",
+                "text": "Attain two of the following proficiency badges: Camper (Pursuit), Explorer (Pursuit), Pioneering (Pursuit), Backwoods Cooking  (Pursuit)",
+                "order": 2,
+                "type": "MANDATORY",
+                "options": null,
+                "badges_used": [
+                    "badge_camper",
+                    "badge_explorer",
+                    "badge_pioneering",
+                    "badge_backwoods_cooking"
+                ]
+              }
+            ]
+        },
+        {
+          "id": "advanced_a_5",
+          "text": "Sea activities (Elective)",
+          "order": 5,
+          "type": "ELECTIVE",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "advanced_a_5_a",
+              "text": "Complete the sea activities under the Scout Standard Award.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "advanced_a_5_b",
+              "text": "Attain the Boatman badge.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null,
+                "badges_used": [
+                    "badge_boatman"
+                ]
+            },
+            {
+              "id": "advanced_a_5_c",
+              "text": "Attain\ta\tproficiency\tbadge\trelated\tto\tsea\tactivities.",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null,
+                "badges_used": [
+                    "badge_boatman",
+                    "badge_swimmer"
+                ]
+            }
+          ]
+        },
+        {
+          "id": "advanced_a_6",
+          "text": "Air activities (Elective)",
+          "order": 6,
+          "type": "ELECTIVE",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "advanced_a_6_a",
+              "text": "Complete the air elective under the Scout Standard Award.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "advanced_a_6_b",
+              "text": "Attain the Intermediate Air Activity Badge.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null,
+                "badges_used": [
+                    "badge_intermediate_air_activity"
+                ]
+            },
+            {
+              "id": "advanced_a_6_c",
+              "text": "Understand\t the\tbasic\teffect\tof\taviation\tmeteorology,\t e.g.\tThunder,\t rain and fog, on flight safety and what weather condition will be formed under\tdifferent\tconditions. Note: Members only need to choose one activity out of outdoor activities / Sea activity / Air activity, as their main assessment task, but the same elective choice must be followed for all subsequent progressive awards. Nonetheless, Sea Scout must choose \"Sea activities\" whereas Air Scout must choose \"Air activities\" .As Patrol Leader, your most important job is to carry out the orders which you yourself receive, rather than to worry about whether other boys are carrying out the orders which you give them. 小隊長最重要的工作就是完成你 被交負的任務，而不是擔心童軍伙伴是否會完成你所交 託的工 作。 32 | PROGRESSIVE BADGES SCOUT ADVANCED AWARDPROGRESSIVE BADGESB.",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "advanced_b_1",
+          "text": "Physical Fitness",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "advanced_b_1_a",
+              "text": "Complete one item: have not attained in the previous progressive badge, e.g. Athlete (Interest), Canoeist (Interest), Dragon Boatman (Interest), Horseman (Interest), Rowing Boatman (Interest), Windsurfer (Interest), Archery (Pursuit), Boatswain (Pursuit), Orienteer (Pursuit), Master-at-arms (Pursuit), Marksman (Pursuit) or Skin Diver (Pursuit) etc; ． Implement the training and record weekly progress. impact of bad habits on health ． Bad habits such as alcohol, cigarettes and drug and solvent abuse on health through arranging activities, compiling electronic media, promotion material or other means. infections diseases and drug abuses, and take part in the related seminar or visit an exhibition. Then promote the theme through organizing an activity, compiling a multi-media promotional material or through other means.",
+              "order": 1,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "advanced_b_1_a_opt_i",
+                  "text": "Attain a proficiency badge related to health and fitness that has not been attained before",
+                  "order": 1,
+                  "type": "OPTION",
+                    "badges_used": [
+                        "badge_athlete",
+                        "badge_canoeist",
+                        "badge_dragon_boatman",
+                        "badge_horseman",
+                        "badge_rowing_boatman",
+                        "badge_windsurfer",
+                        "badge_archery",
+                        "badge_boatswain",
+                        "badge_orienteer",
+                        "badge_master_at_arms",
+                        "badge_marksman",
+                        "badge_skin_diver"
+                    ]
+                },
+                {
+                  "id": "advanced_b_1_a_opt_ii",
+                  "text": "Implement and record a 4 to 6 week long physical training plan",
+                  "order": 2,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "advanced_b_1_a_opt_iii",
+                  "text": "Introduce the process of human growth and development and the impact of bad habits on health",
+                  "order": 3,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "advanced_b_1_a_opt_iv",
+                  "text": "Promote a topic related to healthy living, e.g. prevention of HIV,",
+                  "order": 4,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "advanced_b_2",
+          "text": "Art, Creativity and Technology",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "advanced_b_2_a",
+              "text": "Attain\ta\tproficiency\t badge\trelated\tto\tart,\tcreativity\t or\ttechnology\t which you have not attained in previous progressive badge, e.g. Photographer (Interest), Communicator (Pursuit), Computer (Pursuit), Electronics (Pursuit), Mechanics (Pursuit) or Jobman (Service).",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null,
+                "badges_used": [
+                    "badge_photographer",
+                    "badge_communicator",
+                    "badge_computer",
+                    "badge_electronics",
+                    "badge_mechanics",
+                    "badge_jobman"
+                ]
+            },
+            {
+              "id": "advanced_b_2_b",
+              "text": "Complete one item: magic tricks, singing, troop or group performance of musical instruments, dancing, puppet show etc. painting,\t leathercraft,\t wax\tadornment,\t sculpture,\t ropecraft,\t sweets or cakes etc. campsite, a pioneering project, a plane or a boat etc.PROGRESSIVE BADGES | 33 SCOUT ADVANCED AWARDPROGRESSIVE BADGESV. Promote the activities of the patrol, troop or group using I.T ., e.g. build a website, page in social networking sites, blogs, taking digital videos for making an electronic poster. the components and the working principles.",
+              "order": 2,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "advanced_b_2_b_opt_i",
+                  "text": "Take part in a performance during activities of patrol, e.g. drama,",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "advanced_b_2_b_opt_ii",
+                  "text": "Create an artwork for the patrol, troop or group, e.g. painting, glass",
+                  "order": 2,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "advanced_b_2_b_opt_iii",
+                  "text": "Compose and perform a patrol song for the patrol.",
+                  "order": 3,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "advanced_b_2_b_opt_iv",
+                  "text": "Make a model with proper scale using appropriate materials, e.g. a",
+                  "order": 4,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "advanced_b_2_b_opt_vi",
+                  "text": "Make a electrical animal, insect or similar model - explain the ideas,",
+                  "order": 6,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "advanced_b_3",
+          "text": "Leadership",
+          "order": 3,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "advanced_b_3_a",
+              "text": "Participate in a Patrol Leaders’ Council meeting and execute one of its decisions.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "advanced_b_4",
+          "text": "Spiritual Development",
+          "order": 4,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "advanced_b_4_a",
+              "text": "Undertake a duty in the patrol, troop or group for not less than 3 months.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "advanced_b_4_b",
+              "text": "Complete one item: related activity, e.g. Duty to God Day; relationship with the scouting movement.Happiness is not mere pleasure not the outcome of wealth. It is the result of active work rather than passive enjoyment of pleasure. 財富不會讓人得到最大的快樂，積極主動參 與付出得到的快樂更勝於聲色享樂。 34 | PROGRESSIVE BADGES SCOUT ADVANCED AWARDPROGRESSIVE BADGESC.",
+              "order": 2,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "advanced_b_4_b_opt_i",
+                  "text": "Participate in a religious / spiritual development activity or religion-",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "advanced_b_4_b_opt_ii",
+                  "text": "Share your personal religious belief and habits; and their",
+                  "order": 2,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "advanced_c_1",
+          "text": "Service",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Society",
+          "sub_requirements": [
+            {
+              "id": "advanced_c_1_a",
+              "text": "Pack\ta\tpatrol\tfirst\taid\tkit\tsuitable\tfor\tan\ttwo-day-and-one-night\t outdoor activity, and know how to use the items in the kit.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "advanced_c_1_b",
+              "text": "Demonstrate how to treat a wound, bleeding, heat stroke, and heat exhaustion with the correct use of dressings and bandages; know the reasons and way of treatment for heat stroke and heat exhaustion.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "advanced_c_1_c",
+              "text": "Know how to plan community activities ． State the procedures for planning a community activity and provide a time and work schedule for the planning process.",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "advanced_c_1_d",
+              "text": "Assist in planning and take part in service of at least 12 hours approved by the Group, District, Region or Association headquarters. Half of the service must be provided as a scout. Record the details of the service, such as the organization, targets, time and location.",
+              "order": 4,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "advanced_c_2",
+          "text": "Community and local awareness",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Society",
+          "sub_requirements": [
+            {
+              "id": "advanced_c_2_a",
+              "text": "Complete one item: (Service), Disability Awareness (Service), or the Community Involvement Badge etc. and the Legislative Council and explain to the patrol the importance of voting. individual needs with your patrol members.",
+              "order": 1,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "advanced_c_2_a_opt_i",
+                  "text": "Attain a badge related to understanding of community, e.g. Civics",
+                  "order": 1,
+                  "type": "OPTION",
+                    "badges_used": [
+                        "badge_civics",
+                        "badge_disability_awareness",
+                        "badge_community_involvement"
+                    ]
+                },
+                {
+                  "id": "advanced_c_2_a_opt_ii",
+                  "text": "Introduce the organization and functions of the District Council",
+                  "order": 2,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "advanced_c_2_a_opt_iii",
+                  "text": "Participate in one disability awareness activity and know their",
+                  "order": 3,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "advanced_c_3",
+          "text": "Knowing the world",
+          "order": 3,
+          "type": "MANDATORY",
+          "section": "Society",
+          "sub_requirements": [
+            {
+              "id": "advanced_c_3_a",
+              "text": "Complete one item.",
+              "order": 1,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "advanced_c_3_a_opt_i",
+                  "text": "Introduce an international organization including its purpose, aim",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "advanced_c_3_a_opt_ii",
+                  "text": "Introduce a scouting organization in another country / region,",
+                  "order": 2,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "advanced_d_1",
+          "text": "Ecological environment",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Environment",
+          "sub_requirements": [
+            {
+              "id": "advanced_d_1_a",
+              "text": "Introduce the ecological environment of Hong Kong, types and diversity and\tdistribution\t of\tflora\tand\tfauna.\tList\tthe\tendangered\t species\tin\tHong Kong and the threats upon them. ． Using photos/videos, multimedia and other means; ． Introduce 10 endangered species in Hong Kong and the threats upon them.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "advanced_d_2",
+          "text": "Meteorology",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Environment",
+          "sub_requirements": [
+            {
+              "id": "advanced_d_2_a",
+              "text": "Complete one item: Use drawings,movie clips, electronic multimedia, models or other means to introduce the principle Summer Solstice, Autumnal Equinox and Winter Solstice. Briefly explain the relationship between the 24 solar - terms and local customs.",
+              "order": 1,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "advanced_d_2_a_opt_i",
+                  "text": "Introduce the principle behind the formation of the four seasons.",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "advanced_d_2_a_opt_ii",
+                  "text": "Introduce the 24 solar-terms - state the features of Vernal Equinox,",
+                  "order": 2,
+                  "type": "OPTION"
+                }
+              ]
+            },
+            {
+              "id": "advanced_d_2_b",
+              "text": "Complete one item: suitable\tfor\tdifferent\tclimates; of the warnings and contingency measures implemented by the association for inclement weather.",
+              "order": 2,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "advanced_d_2_b_opt_i",
+                  "text": "Introduce the climate of Hong Kong and list the patrol activities",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "advanced_d_2_b_opt_ii",
+                  "text": "Introduce the commonly used weather terminologies, meanings",
+                  "order": 2,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "advanced_d_3",
+          "text": "Crisis and protection",
+          "order": 3,
+          "type": "MANDATORY",
+          "section": "Environment",
+          "sub_requirements": [
+            {
+              "id": "advanced_d_3_a",
+              "text": "Complete one item: ． Know the 3 elements, including environment & ecology, society and economy and their respective importance. Introduce the work done by the Hong Kong Government and other organizations on sustainable development. day, or on 2 occasions ． Examples of environmental conservation: conservation on biodiversity, improvement in air quality, reduction in noise, improvement in water quality reduction of solid wastes or the use of sustainable energy; ． Examples of work: practices, promotion and education.36 | PROGRESSIVE BADGES SCOUT ADVANCED AWARDPROGRESSIVE BADGESE.",
+              "order": 1,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "advanced_d_3_a_opt_i",
+                  "text": "Explain the work for 'sustainable development' in Hong Kong",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "advanced_d_3_a_opt_ii",
+                  "text": "Take part in environmental conservation work of not less than 1",
+                  "order": 2,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "advanced_e_1",
+          "text": "Participate in an activity you have not attempted before and introduce it to your patrol members ． Activities should be self-challenging and personal developing, e.g. rock climbing, adventuring. ． Introduce this activity and share your experience with your patrol members through photographs, video, website, page in social networking site, or any other presentation means.",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "New Experience",
+          "sub_requirements": []
+        }
+      ],
+      "prerequisites": [
+        "badge_standard"
+      ]
+    },
+    {
+      "id": "badge_chief",
+      "title": "Chief Scout's Award",
+      "type": "PROGRESSIVE",
+      "section": "SCOUT",
+      "requirements": [
+        {
+          "id": "chief_a_1",
+          "text": "Camp craft",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "chief_a_1_a",
+              "text": "Plan and implement an overnight wild camp. ． Make a camp plan, which covers at least the list of personal and patrol equipment, information of the campsite, layout of the camping area, distribution and design of gadgets, arrangement on meals, patrol activities, budgets, transport and work allocation. ． Organize and participate in a patrol, group or district camp activity based on the above camp plan.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_a_1_b",
+              "text": "Teach basic camping skills. ． Teach the patrol rucksack packing, gadget building, tent packing, backwoods cooking and pioneering.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_a_1_c",
+              "text": "Make a camp log ． Report the camp activity, which covers at least the personal and a patrol equipment used, information of the campsite, layout of the camping area, distribution and design of gadgets, arrangement on meals, camping experience, financial reports, work allocation and evaluation, etc.",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "chief_a_2",
+          "text": "Adventure",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "chief_a_2_a",
+              "text": "Plan, participate and record an overnight trip. ． Plan and complete an expedition of at least 30 km on foot with your patrol member. ． Make a expedition plan and a report for this trip.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_a_2_b",
+              "text": "Teach the basic techniques in expedition: ． Teach your patrol map reading skills, the use of grid, ratio and distance, grid coordinates, map setting, gears and equipment packing for hiking. ",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_a_2_c",
+              "text": "Understand the basic wild survival skills: ． Understand the survival skill when lost in the wilderness, such as how to purify water, pack and make use of survival kit refuse, sending survival codes etc. ",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "chief_a_3",
+          "text": "Pioneering",
+          "order": 3,
+          "type": "MANDATORY",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "chief_a_3_a",
+              "text": "Plan and lead a patrol to complete a pioneering structure with no less than 3 different lashings. ． Plan and lead the project including prior preparation to afterward clean up. ． Example of the pioneering projects include: Beacon Tower, Brynbach Tower, Suspended Flag Pole or Rocker Bridge, etc. ． Make a pioneering project plan, which covers at least structure of the work, procedures, tools and equipment required and timetable etc.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_a_3_b",
+              "text": "Teach basic pioneering techniques ． Teach the patrol different knotting and their usage, methods and skill in tidying up ropes after the project.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "chief_a_4",
+          "text": "Outdoor activity (Elective)",
+          "order": 4,
+          "type": "ELECTIVE",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "chief_a_4_a",
+              "text": "Complete the Outdoor activity in the Scout Advanced Award .",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_a_4_b",
+              "text": "Plan and participate in a whole day outdoor activity with a patrol, e.g. : ． backwoods cooking, tracking, communication using codes and astronomical observations, etc.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "chief_a_5",
+          "text": "Sea activity (Elective)",
+          "order": 5,
+          "type": "ELECTIVE",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "chief_a_5_a",
+              "text": "Complete the Sea activity in the Scout Advanced Award.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_a_5_b",
+              "text": "Plan and participate in a sea journey of at least 6 hours.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "chief_a_6",
+          "text": "Air activity (Elective)",
+          "order": 6,
+          "type": "ELECTIVE",
+          "section": "Outdoor Challenge",
+          "sub_requirements": [
+            {
+              "id": "chief_a_6_a",
+              "text": "Complete the Air activity from the Scout Advanced Award.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_a_6_b",
+              "text": "After discussion with the Scout leader, choose from the list of air activity and participate in two air activities which you have not participated before. Note: Members only need to choose one activity out of outdoor activities / Sea activity / Air activity, as their main assessment task, but the same elective choice must be followed for all subsequent progressive awards. Nonetheless, Sea Scout must choose \"Sea activities\" whereas Air Scout must choose \"Air activities\" .PROGRESSIVE BADGES | 39 CHIEF SCOUT'S AWARDPROGRESSIVE BADGESB.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "chief_b_1",
+          "text": "Physical Fitness",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "chief_b_1_a",
+              "text": "Attain a proficiency badge related to physical fitness that you have not attained in previous Progressive Badges, e.g., Dragon Boatman (Interest), Houseman (Interest), Rowing Boatman (Interest), Athlete (Interest), Windsurfer (Interest), Archery (Pursuit), Skipper (Pursuit), Canoeist (Pursuit), Orienteer (Pursuit), Marksman (Pursuit), Master-at- arms (Pursuit), Sailor (Pursuit) or Skin Diver (Pursuit) etc.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null,
+              "badges_used": [
+                "badge_dragon_boatman",
+                "badge_houseman",
+                "badge_rowing_boatman",
+                "badge_athlete",
+                "badge_windsurfer",
+                "badge_archery",
+                "badge_skipper",
+                "badge_canoeist",
+                "badge_orienteer",
+                "badge_marksman",
+                "badge_master_at_arms",
+                "badge_sailor",
+                "badge_skin_diver"
+              ]
+            },
+            {
+              "id": "chief_b_1_b",
+              "text": "Plan and implement a patrol activity with the theme of physical activity or competition.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "chief_b_2",
+          "text": "Art, Creativity and Technology",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "chief_b_2_a",
+              "text": "Create and lead a performance, game or yell in a campfire or lantern night.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_b_2_b",
+              "text": "Complete one of the following: ． Make an art piece and share the creation process with your patrol member for a specific theme. ． Teach your patrol member how to build a model with proper scale. ． Teach your patrol member how to make promotion product or share the activities in patrol , troop or group using IT . ． Teach your patrol how to make a sample mechanical tool, animal or insect, which is powered by battery. ． Use electronic maps to indicate the landmark in the district where your group is located in, or indicate the routes and checkpoints for your future journey in countryside. ． Publish the map onto your own website, blog or social networking site. ． Produce a wired or wireless mechanical model, e.g. mechanical animal, insect or robot etc. ． Demonstrate the operation of it, and state the function, component of and working principles behind the model.A Scout is never taken by surprise, he knows exactly what to do when anything unexpected happens. 一個童軍不會被意外阻撓。當真的有意外發生，他都會知道該如何處理。 40 | PROGRESSIVE BADGES CHIEF SCOUT'S AWARDPROGRESSIVE BADGES3. Leadership",
+              "order": 2,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "chief_b_2_b_opt_i",
+                  "text": "Share the process of creating one art piece:",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "chief_b_2_b_opt_ii",
+                  "text": "Teach how to make a model:",
+                  "order": 2,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "chief_b_2_b_opt_iii",
+                  "text": "Teach how to make a promotion product with the use of IT:",
+                  "order": 3,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "chief_b_2_b_opt_iv",
+                  "text": "Teach how to make a machine powered by battery:",
+                  "order": 4,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "chief_b_2_b_opt_v",
+                  "text": "Create a route in an electronic map:",
+                  "order": 5,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "chief_b_2_b_opt_vi",
+                  "text": "Make a controllable mechanical model:",
+                  "order": 6,
+                  "type": "OPTION"
+                }
+              ]
+            },
+            {
+              "id": "chief_b_2_a",
+              "text": "Attain the Leadership Award.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null,
+              "badges_used": [
+                "badge_leadership_award"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chief_b_4",
+          "text": "Spiritual development",
+          "order": 4,
+          "type": "MANDATORY",
+          "section": "Personal Development",
+          "sub_requirements": [
+            {
+              "id": "chief_b_4_a",
+              "text": "Introduce the scout promise, law and motto. ． Introduce the relevant content and meaning to newly-joined scouts",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_b_4_b",
+              "text": "Complete one of the following: ． Understanding of the meaning purpose and content of silent prayer. ． Lead a silent prayer in a group meeting or at the end of the group activity. ． Know the purpose and meaning of the scouts' own. ． Be responsible for a part of the scouts' own, e.g. singing, reciting the promise and law or  a short sharing. CHIEF SCOUT'S AWARDPROGRESSIVE BADGESC.",
+              "order": 2,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "chief_b_4_b_opt_i",
+                  "text": "Lead a silent prayer",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "chief_b_4_b_opt_ii",
+                  "text": "Assist in a scouts' own",
+                  "order": 2,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "chief_b_4_b_opt_iii",
+                  "text": "Attain the religious badge.",
+                  "order": 3,
+                  "type": "OPTION",
+                  "badges_used": [
+                    "badge_religious"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chief_c_1",
+          "text": "Service",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Society",
+          "sub_requirements": [
+            {
+              "id": "chief_c_1_a",
+              "text": "Attain one of the following proficiency badge. ． First Aid (Service), Fireman (Service), Life-saver (Service)",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null,
+              "badges_used": [
+                "badge_first_aid",
+                "badge_fireman",
+                "badge_lifesaver"
+              ]
+            },
+            {
+              "id": "chief_c_1_b",
+              "text": "Discuss an community participating activity ． Discuss with the Patrol a community-participation project that the government is encouraging people to understand participate in, such as environment cleaning and public health, anti-corruption, anti-crime, world environmental  protection, life education, drug education, fire safety education, equal access to education, HIV prevention education, education on respect for intellectual property, heritage preservation, conservation of environment, mental health or sex education, etc. ． Participate in or visit seminars or exhibitions, and understand its purpose, content, and the message promoted.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_c_1_c",
+              "text": "Assist in planning and participate in service of no less than 16 hours: ． Assist in planning and participating in a service approved by Group, District, Region or Association headquarters. ． Half of the service should be provided as a Scout. ． At least half of the service should be provided to units other than Scout. ． Record the basic detail of the services, such as the organization, targets, time, location and content etc. ． Present briefly the service experience to the Group or the public.",
+              "order": 3,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "chief_c_2",
+          "text": "Understanding on the community and the local region",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Society",
+          "sub_requirements": [
+            {
+              "id": "chief_c_2_a",
+              "text": "To discuss a local current issue ． Discuss with the patrol related topic such as hygene, medicial care, housing, poverty, new immigrants, education conservation and the environment. Understand its causes, impacts, and list same recent cases. Make suggestions to solve or allocate the problem.The real Scout spirit of thrift-that is to say, the spirit that makes one desire to be self-supporting in order to be more free to help others in their time of need. 童軍真正的目的是自給自足並可以在別人需要時隨時給予協助。 42 | PROGRESSIVE BADGES CHIEF SCOUT'S AWARDPROGRESSIVE BADGESb. Complete one of the following: ． Learn how to communicate with people with special needs in daily life. ． Enroll in workshops or courses related to people with special needs, such as courses on sign language and Braille training. ． Conduct a survey in your community on people with disabilities, the elderly, youth, minorities, new immigrants and low-income families. Examine use in community facilities and services. ． Report the findings to your patrol, group or the public and suggest recommendations for improvement.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_c_2_b",
+              "text": "Complete one of the following: ",
+              "order": 2,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "chief_c_2_b_opt_i",
+                  "text": "Attain the Tourism (Interest) Proficiency Badge.",
+                  "order": 1,
+                  "type": "OPTION",
+                  "badges_used": [
+                    "badge_tourism"
+                  ]
+                },
+                {
+                  "id": "chief_c_2_b_opt_ii",
+                  "text": "Learn how to communicate with people with special needs in daily life.",
+                  "order": 2,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "chief_c_2_b_opt_iii",
+                  "text": "Probe into the provision of community facilities and services for people with special needs.",
+                  "order": 3,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chief_c_3",
+          "text": "Global understanding",
+          "order": 3,
+          "type": "MANDATORY",
+          "section": "Society",
+          "sub_requirements": [
+            {
+              "id": "chief_c_3_a",
+              "text": "Discuss an international issue ． Discuss an international issue with other members, such as trade, world health, environment, international conflict, racism, refugees, peace, globalization, food crisis and animal protection. Understand its causes and impacts. List some recent cases, and suggest recommendation for improvement or alleviation.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_c_3_b",
+              "text": "Complete one of the following: (JOTA/JOTI) and communicate with foreign scouts. ． Contact with a foreign scout regularly for at least 3 months. Learn the culture, daily life and scout life etc. of each other. ． Share your experience to your patrol members in any means. ． Participate in an exchange program, either held in Hong Kong or overseas. Learn the culture, daily life and scout life etc. of each other.PROGRESSIVE BADGES | 43 CHIEF SCOUT'S AWARDPROGRESSIVE BADGESD.",
+              "order": 2,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "chief_c_3_b_opt_i",
+                  "text": "Participate in the Jamboree on the Air/Jamboree on the Internet",
+                  "order": 1,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "chief_c_3_b_opt_ii",
+                  "text": "Introduce foreign scout",
+                  "order": 2,
+                  "type": "OPTION"
+                },
+                {
+                  "id": "chief_c_3_b_opt_iii",
+                  "text": "Participate in an exchange program with overseas scouts",
+                  "order": 3,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chief_d_1",
+          "text": "Ecological Environment",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "Environment",
+          "sub_requirements": [
+            {
+              "id": "chief_d_1_a",
+              "text": "Attain a proficiency badge related to environment which you have not attained in the previous Progressive Badges; such as Geologist (Interest), Naturalist (Interest), Smallholder (Interest), Conservator (Service) or Tree Carer (Interest) proficiency badge, World Conservation Badge or the World Scout Environment Badge.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null,
+              "badges_used": [
+                "badge_geologist",
+                "badge_naturalist",
+                "badge_smallholder",
+                "badge_conservator",
+                "badge_tree_carer",
+                "badge_world_conservation",
+                "badge_world_scout_environment"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chief_d_2",
+          "text": "Meteorology",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "Environment",
+          "sub_requirements": [
+            {
+              "id": "chief_d_2_a",
+              "text": "Teach one meteorological knowledge ． Teach your patrol member a meteorological knowledge, such as factors of weather, types of clouds, and the effects on Scout activities of different weather condition, etc.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_d_2_b",
+              "text": "Complete one of the followings: automatic weather station in a Scout campsite. ． Obtain a weather chart from the Hong Kong Observatory or other meteorological organisations. State its function and basic legends, such as rain, showers, thunderstorms, snow, haze, fog, no wind, front and trough etc. ． State the weather condition described by the weather chart. ． Record the weather conditons for 7 days based on the automatic weather station from the Association and state the reasons behind the changes in weather conditions.",
+              "order": 2,
+              "type": "OPTIONAL",
+              "options": [
+                {
+                  "id": "chief_d_2_b_opt_i",
+                  "text": "Attain the Meteorologist (Interest) Proficiency Badge.",
+                  "order": 1,
+                  "type": "OPTION",
+                  "badges_used": [
+                    "badge_meteorologist"
+                  ]
+                },
+                {
+                  "id": "chief_d_2_b_opt_ii",
+                  "text": "Introduce weather charts and record weather data in a week from a automatic weather station in a scout campsite.",
+                  "order": 2,
+                  "type": "OPTION"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chief_d_3",
+          "text": "Crisis and protection",
+          "order": 3,
+          "type": "MANDATORY",
+          "section": "Environment",
+          "sub_requirements": [
+            {
+              "id": "chief_d_3_a",
+              "text": "Introduce the impact of human activities on the environment ． Through delivering speech, organizing events, taking photos or videos, multimedia production or any other means, share these impacts with your patrol, such as the formation of acid rain, greenhouse effect, tropical rain forests destruction, ozone depletion, soil pollution, water pollution, light pollution and noise pollution.",
+              "order": 1,
+              "type": "MANDATORY",
+              "options": null
+            },
+            {
+              "id": "chief_d_3_b",
+              "text": "Plan and lead an environmental conservation project ． Plan and lead an environmental conservation project, such as the conservation of biodiversity, improvement on air  quality, reduction on noise pollution, improvement in water quality, reduction of waste production and sustainable use of energy. Example of projects include practise, promotion or education on programme.",
+              "order": 2,
+              "type": "MANDATORY",
+              "options": null
+            }
+          ]
+        },
+        {
+          "id": "chief_e_1",
+          "text": "Participate in an activity you have never attempted and introduce it to your other patrol members ． Activities should be self-challenging and personal developing, e.g. rock climbing, adventuring. ． Introduce this activity and share your experience with your patrol members through photographing, video taking, website, page in social networking sites, blog, or any other means of presentation.",
+          "order": 1,
+          "type": "MANDATORY",
+          "section": "New Experience",
+            "sub_requirements": []
+        },
+        {
+          "id": "chief_e_2",
+          "text": "Attain  a Proficiency Badge (Instructor)",
+          "order": 2,
+          "type": "MANDATORY",
+          "section": "New Experience",
+          "badge_used": [
+            "badge_cyclist_instructor",
+            "badge_photographer_instructor",
+            "badge_sailor_instructor",
+            "badge_swimmer_instructor",
+            "badge_astronomer_instructor",
+            "badge_backwoods_cook_instructor",
+            "badge_camper_instructor",
+            "badge_communicator_instructor",
+            "badge_cook_(chinese_dishes)_instructor",
+            "badge_flight_simulator_instructor",
+            "badge_map_maker_instructor",
+            "badge_mechanic_instructor",
+            "badge_meteorologist_instructor",
+            "badge_multimedia_designer_instructor",
+            "badge_observer_instructor",
+            "badge_orienteer_instructor",
+            "badge_pioneer_instructor",
+            "badge_tree_carer_instructor",
+            "badge_conservator_instructor",
+            "badge_lifesaver_instructor"
+          ]
+
+        }
+      ],
+      "prerequisites": [
+        "badge_advanced"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+name: Development Pipeline
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: develop
+
+    services:
+      # Add PostgreSQL service container for tests
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_DB: scout_management
+          POSTGRES_USER: test_user
+          POSTGRES_PASSWORD: test_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+#      - name: Import badges
+#        run: npm run import-badges
+#        env:
+#          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+#          DB_HOST: ${{ secrets.DB_HOST }}
+#          DB_PORT: ${{ secrets.DB_PORT }}
+#          DB_USERNAME: ${{ secrets.DB_USERNAME }}
+#          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+#          DB_DATABASE: ${{ secrets.DB_DATABASE }}
+#          OPENAI_API_KEY: ${{secrets.OPENAI_API_KEY}}
+#          FIREBASE_SERVICE_ACCOUNT_KEY: ${{secrets.FIREBASE_SERVICE_ACCOUNT_KEY}}
+
+      # Add Google Cloud Authentication
+      - name: Google Auth
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+#          token_format: 'access_token'
+
+      # Setup gcloud CLI
+      - name: Set up Cloud SDK
+        uses: 'google-github-actions/setup-gcloud@v1'
+
+      # Set test database URL for the test phase
+      - name: Test with Database
+        env:
+          DATABASE_URL: postgresql://test_user:test_password@localhost:5432/scout_management
+        run: npm test
+
+      # Configure docker to use gcloud credentials
+      - name: Configure Docker
+        run: |
+          gcloud auth configure-docker asia-east1-docker.pkg.dev
+
+      # Build and Push Docker image
+      - name: Build and Push
+        run: |
+          docker build -t ${{ format('asia-east1-docker.pkg.dev/{0}/scout-management-be/api:dev-{1}', secrets.GCP_PROJECT_ID, github.sha) }} \
+             --build-arg DB_HOST=${{secrets.DB_HOST}} \
+                --build-arg DB_PORT=${{secrets.DB_PORT}} \
+                --build-arg DB_USERNAME=${{secrets.DB_USERNAME}} \
+                --build-arg DB_PASSWORD=${{secrets.DB_PASSWORD}} \
+                --build-arg DB_DATABASE=${{secrets.DB_DATABASE}} \
+                --build-arg EMAIL_USER=${{secrets.EMAIL_USER}} \
+                --build-arg EMAIL_APP_PASSWORD=${{secrets.EMAIL_APP_PASSWORD}} \
+                --build-arg EMAIL_FROM=${{secrets.EMAIL_FROM}} \
+                --build-arg JWT_SECRET=${{secrets.JWT_SECRET}} \
+                --build-arg OPENAI_API_KEY=${{secrets.OPENAI_API_KEY}} \
+                --build-arg FIREBASE_SERVICE_ACCOUNT_KEY=${{secrets.FIREBASE_SERVICE_ACCOUNT_KEY}} . --progress=plain --no-cache
+          docker push ${{ format('asia-east1-docker.pkg.dev/{0}/scout-management-be/api:dev-{1}', secrets.GCP_PROJECT_ID, github.sha) }}
+
+      - name: Deploy to Cloud Run
+        id: deploy
+        uses: google-github-actions/deploy-cloudrun@v1
+        with:
+          service: scout-management-api
+          region: asia-east1
+          image: asia-east1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/scout-management-be/api:dev-${{ github.sha }}
+          flags: --allow-unauthenticated
+          
+
+      - name: Show Output
+        run: echo ${{ steps.deploy.outputs.url }}
